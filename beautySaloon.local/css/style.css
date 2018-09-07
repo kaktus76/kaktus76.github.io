@@ -49,9 +49,6 @@ a {
   font-weight: bold;
   line-height: 0.4;
 }
-main {
-  overflow: hidden;
-}
 main .services span {
   font-weight: 700;
 }
@@ -151,8 +148,8 @@ main .advantage .advantag-box .advantage-list {
 main .advantage .advantag-box .advantage-list .list {
   width: 100%;
   display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
   margin-bottom: 50px;
 }
 main .advantage .advantag-box .advantage-list .list .fas {
@@ -171,27 +168,17 @@ main .advantage .advantag-box .advantage-list .list .list-text p {
   color: #282828;
 }
 main .sale {
-  position: relative;
   width: 100%;
-  min-height: 500px;
-  height: 100%;
+  height: 500px;
   background-image: url(../images/application-bg.jpg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-<<<<<<< HEAD
   background-color: #36f7ad;
   -webkit-background-size: 100%;
   -o-background-size: 100%;
   background-size: 100%;
-=======
-  -webkit-background-size: 800px;
-  -o-background-size: 800px;
-  background-size: 800px;
->>>>>>> 974efc6f5937a3549b20080b6a6c8cc58f584189
 }
 main .sale .sale-box {
-  position: absolute;
-  z-index: 10;
   width: 100%;
   margin-top: 10%;
   text-align: center;
