@@ -1,0 +1,401 @@
+/*  ШРИФТЫ	 */
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&subset=cyrillic');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  max-width: 1080px;
+}
+.row {
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+}
+/* ПЕРЕМЕННЫЕ ЦВЕТ */
+/*  ПЕРЕМЕННЫЕ РАЗМЕР ШРИФТА  */
+.header {
+  width: 100%;
+  height: 1000px;
+  background-image: url(../images/start-page.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin-bottom: 60px;
+}
+.header .title {
+  width: 60%;
+  height: 100%;
+  padding: 40% 0 10% 0;
+  color: #282828;
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: normal;
+}
+.header .title h1 {
+  font-size: 4.5rem;
+  margin-top: 25px;
+}
+.header .title .pink {
+  color: #e77785;
+  font-size: 4.5rem;
+  font-weight: bold;
+  line-height: 0.4;
+}
+main .services span {
+  font-weight: 700;
+}
+main .services .listOfServices {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main .services .listOfServices .service {
+  width: 25%;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: column;
+  padding: 40px;
+}
+main .services .listOfServices .service .image {
+  text-align: right;
+}
+main .services .listOfServices .service .image img {
+  width: 81px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+main .services .listOfServices .service span {
+  font-weight: 400;
+  color: #282828;
+  margin: 40px 0;
+  font-size: 1.1rem;
+}
+main .services .listOfServices .service p {
+  color: #616161;
+}
+main .services .listOfServices .offer {
+  padding: 40px 0;
+  width: 25%;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+main .services .listOfServices .offer h2 {
+  padding: 15px 0;
+  color: #e77785;
+}
+main .services .listOfServices .offer p {
+  margin: 25px 0;
+  color: #616161;
+}
+main .services .listOfServices .offer a {
+  color: #FFF;
+  text-align: center;
+  padding: 10px;
+  width: 60%;
+  font-weight: 300;
+  font-size: 0.875rem;
+  background-color: #e77785;
+  border-radius: 20px;
+}
+main .services .listOfServices .offer a:hover {
+  color: #000;
+}
+main .advantage {
+  width: 100%;
+  min-height: 700px;
+  background-image: url(../images/advantages.jpg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-color: #FFF;
+  -webkit-background-size: 50%;
+  -o-background-size: 50%;
+  background-size: 800px;
+}
+main .advantage .advantag-box {
+  width: 55%;
+  float: right;
+}
+main .advantage .advantag-box .advantage-text {
+  width: 100%;
+  padding-top: 50px;
+}
+main .advantage .advantag-box .advantage-text .adv-title {
+  margin-bottom: 15px;
+  font-weight: 300;
+  font-size: 2rem;
+}
+main .advantage .advantag-box .advantage-text .text {
+  margin-bottom: 20px;
+  color: #616161;
+}
+main .advantage .advantag-box .advantage-list {
+  width: 100%;
+  margin-top: 4.375rem;
+}
+main .advantage .advantag-box .advantage-list .list {
+  width: 100%;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+main .advantage .advantag-box .advantage-list .list .fas {
+  margin-right: 5%;
+  font-size: 3.6rem;
+  color: #e77785;
+  line-height: 1.4;
+}
+main .advantage .advantag-box .advantage-list .list .list-text {
+  width: 50%;
+  line-height: 1.4;
+  font-size: 1.5rem;
+}
+main .advantage .advantag-box .advantage-list .list .list-text p {
+  font-weight: 100;
+  color: #282828;
+}
+main .sale {
+  width: 100%;
+  height: 500px;
+  background-image: url(../images/application-bg.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: #e77785;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+}
+main .sale .sale-box {
+  width: 100%;
+  margin-top: 10%;
+  text-align: center;
+  color: #fff;
+}
+main .sale .sale-box span {
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+main .sale .sale-box p {
+  font-size: 1.375rem;
+  font-weight: 300;
+  padding: 5% 0;
+}
+main .sale .sale-box button {
+  font-size: 1.25rem;
+  border-radius: 30px;
+  padding: 10px 15px;
+  font-weight: 300;
+  outline: none;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  transition: transform .1s ease;
+  transform: scale(1);
+  cursor: pointer;
+}
+main .sale .sale-box button:hover {
+  color: #e77785;
+}
+main .sale .sale-box button:focus {
+  transform: scale(0.98);
+}
+main .special {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 150px;
+}
+main .special .box-special-text {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-top: 80px;
+  color: #282828;
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: normal;
+}
+main .special .box-special-text h2 {
+  font-size: 2.65rem;
+  padding: 40px 0;
+}
+main .special .box-special-text p {
+  font-size: 1rem;
+  color: #616161;
+  padding: 0 12%;
+  font-weight: 300;
+}
+main .special .offer-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+main .special .offer-card .card {
+  width: 23%;
+}
+main .special .offer-card .card img {
+  width: 100%;
+  border-radius: 50px;
+}
+main .special .offer-card .card h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+main .special .offer-card .card .price {
+  color: #e77785;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+main .special .offer-card .card ul {
+  padding: 25px 20px;
+}
+main .special .offer-card .card ul li {
+  font-size: 1rem;
+  color: #e77785;
+}
+main .special .offer-card .card ul li span {
+  color: #616161;
+}
+main .special .offer-card .card button {
+  padding: 10px 20px;
+  background-color: #e77785;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+main .special .offer-card .card button:hover {
+  background-color: #000;
+  color: #e77785;
+}
+main .slider {
+  width: 100%;
+  height: 500px;
+  background: url(../images/slider/slider-bg.jpg) no-repeat;
+  background-size: 100%;
+  color: #fff;
+}
+main .slider .opacity {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.795);
+}
+main .slider .opacity .wrapper-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+main .slider .opacity .wrapper-slider .slide {
+  width: 80%;
+  position: absolute;
+  text-align: center;
+}
+main .slider .opacity .wrapper-slider .slide .name {
+  margin-top: 20px;
+  color: #e77785;
+  font-weight: 500;
+}
+main .slider .opacity .wrapper-slider .slide .comment {
+  margin-top: 20px;
+  font-size: 1.25rem;
+}
+main .contacts {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .contacts .contact {
+  width: 50%;
+  background: #282828;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+main .contacts .contact .r span {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+main .contacts .contact .r h3 {
+  color: #e77785;
+  font-size: 2.25rem;
+  margin-bottom: 60px;
+  margin-top: 15px;
+}
+main .contacts .contact .r p {
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+main .contacts .contact .r p .fas,
+main .contacts .contact .r p .far {
+  margin-right: 15px;
+  color: #e77785;
+}
+main .contacts .map {
+  width: 50%;
+}
+.footer {
+  width: 100%;
+  height: 100%;
+}
+.footer .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .row span {
+  font-size: 1.25rem;
+  margin: 50px 0 40px 0;
+  font-weight: 300;
+}
+.footer .row p {
+  margin-bottom: 80px;
+  font-weight: 600;
+  font-size: 2.25rem;
+}
+.footer .row .social {
+  padding-bottom: 40px;
+}
+.footer .row .social a {
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  font-size: 1.8rem;
+  color: #fff;
+  background: #e77785;
+  margin-right: 15px;
+  transition: .5s;
+}
+.footer .row .social a:hover {
+  background: #000;
+  color: #e77785;
+}
+/*# sourceMappingURL=./style.css.map */

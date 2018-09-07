@@ -1,0 +1,209 @@
+/* ПЕРЕМЕННЫЕ ЦВЕТ */
+/*  ПЕРЕМЕННЫЕ РАЗМЕР ШРИФТА  */
+@media (max-width: 400px) {
+  .header {
+    max-height: 500px;
+    background-size: 800px;
+    position: relative;
+  }
+  .header .title {
+    position: absolute;
+    bottom: -100px;
+  }
+  .header .title .lite {
+    font-size: 1rem;
+  }
+  .header .title h1 {
+    font-size: 1.5rem;
+  }
+  .header .title .pink {
+    font-size: 1.5rem;
+  }
+  main {
+    overflow: hidden;
+  }
+  main .services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .services span {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  main .services .listOfServices {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  main .services .listOfServices .service {
+    width: 100%;
+  }
+  main .services .listOfServices .service span {
+    margin: 15px 0;
+  }
+  main .services .listOfServices .service p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  main .services .listOfServices .service .image {
+    text-align: center;
+  }
+  main .services .listOfServices .offer {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .services .listOfServices .offer a {
+    width: 45%;
+  }
+  main .services .listOfServices .offer p {
+    font-size: 0.9rem;
+    color: #616161;
+    text-align: center;
+  }
+  main .advantage {
+    max-height: 500px;
+    min-height: 1100px;
+    height: 100%;
+    background-size: 500px;
+    position: relative;
+  }
+  main .advantage .advantag-box {
+    position: absolute;
+    top: 500px;
+    width: 100%;
+    float: none;
+  }
+  main .advantage .advantag-box .advantage-text {
+    text-align: center;
+    padding-top: 20px;
+  }
+  main .advantage .advantag-box .advantage-text .adv-title {
+    font-size: 1.45rem;
+  }
+  main .advantage .advantag-box .advantage-text .text {
+    font-size: .9rem;
+  }
+  main .advantage .advantag-box .advantage-list .list {
+    justify-content: center;
+  }
+  main .advantage .advantag-box .advantage-list .list .fas {
+    margin-right: 1%;
+    font-size: 2.5rem;
+  }
+  main .advantage .advantag-box .advantage-list .list .list-text {
+    font-size: 1rem;
+  }
+  main .sale {
+    position: relative;
+    height: 300px;
+    background-size: 500px;
+  }
+  main .sale .pink-opacity {
+    width: 100%;
+    height: 100%;
+    background-color: #e77785;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 1;
+  }
+  main .sale .sale-box {
+    position: absolute;
+    z-index: 10;
+  }
+  main .sale .sale-box span {
+    font-size: 1.5rem;
+  }
+  main .sale .sale-box p {
+    font-size: 1rem;
+  }
+  main .sale .sale-box button {
+    margin-top: 30px;
+  }
+  main .special {
+    margin-bottom: 50px;
+  }
+  main .special .box-special-text {
+    margin-top: 30px;
+  }
+  main .special .box-special-text .lite {
+    font-size: 1rem;
+  }
+  main .special .box-special-text h2 {
+    padding: 20px 0;
+    font-size: 1.5rem;
+  }
+  main .special .box-special-text p {
+    font-size: 0.9rem;
+    padding: 0 4%;
+  }
+  main .special .offer-card {
+    flex-direction: column;
+  }
+  main .special .offer-card .card {
+    padding: 0 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  main .special .offer-card .card h3,
+  main .special .offer-card .card .price {
+    font-size: 1.3rem;
+  }
+  main .special .offer-card .card ul li {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  main .contacts {
+    flex-direction: column;
+  }
+  main .contacts .contact {
+    padding-left: 10px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  main .contacts .contact .r {
+    margin-top: 30px;
+  }
+  main .contacts .contact .r span {
+    font-size: 1rem;
+  }
+  main .contacts .contact .r h3 {
+    font-size: 1.75rem;
+    margin-bottom: 40px;
+  }
+  main .contacts .contact .r p {
+    margin-bottom: 10px;
+  }
+  main .contacts .map {
+    width: 100%;
+  }
+  main .contacts .map iframe {
+    height: 350px;
+  }
+  .footer .row span {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+  }
+  .footer .row p {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+  .footer .row .social a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.5rem;
+    margin-right: 4px;
+  }
+}
+/*# sourceMappingURL=./media.css.map */

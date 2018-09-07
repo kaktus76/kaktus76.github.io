@@ -1,0 +1,239 @@
+// out: ../css/media.css, sourceMap: trye
+
+
+/* ПЕРЕМЕННЫЕ ЦВЕТ */
+@pinkColor: #e77785;
+@liteGrayColor: #616161;
+@whiteColor: #fff;
+@spanColor: #282828;
+@colorHover: #000;
+
+/*  ПЕРЕМЕННЫЕ РАЗМЕР ШРИФТА  */
+@h1Size: 4.5rem;
+@h2Size: 2.25rem;
+@h3Size: 1.5rem;
+@spanSize: 2.25rem;
+@btnMore: 0.875rem;
+@btnSend: 1.25rem;
+
+
+@media (max-width: 400px){
+  .header{
+    max-height: 500px;
+    background-size: 800px;
+    position: relative;
+    .title{
+      position: absolute;
+      bottom: -100px;
+      .lite{
+        font-size: 1rem;
+      }
+      h1{
+        font-size: 1.5rem;
+      }
+      .pink{
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  main{
+    overflow: hidden;
+    .services{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span{
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      .listOfServices{
+        width: 100%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        .service{
+          width: 100%;
+          span{
+            margin: 15px 0;
+          }
+          p{
+            font-size: 0.9rem;
+            text-align: center;
+          }
+          .image{
+            text-align: center;
+          }
+        }
+        .offer{
+          padding-top: 10px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a{
+            width: 45%;
+          }
+          p{
+            font-size: 0.9rem;
+            color: @liteGrayColor;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .advantage{
+      max-height: 500px;
+      min-height: 1100px;
+      height: 100%;
+      background-size: 500px;
+      position: relative;
+      .advantag-box{
+        position: absolute;
+        top: 500px;
+        width: 100%;
+        float: none;
+        .advantage-text{
+          text-align: center;
+          padding-top: 20px;
+          .adv-title{
+            font-size: @h2Size - 0.8rem;
+          }
+          .text{
+            font-size: .9rem;
+          }
+        }
+        .advantage-list{
+          .list{
+            justify-content: center;
+            .fas{
+              margin-right: 1%;
+              font-size: 2.5rem;
+            }
+            .list-text{
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+    .sale{
+      position: relative;
+      height: 300px;
+      background-size: 500px;
+      .pink-opacity{
+        width: 100%;
+        height: 100%;
+        background-color: @pinkColor;
+        opacity: 0.5;
+        position: absolute;
+        z-index: 1;
+      }
+      .sale-box{
+        position: absolute;
+        z-index: 10;
+        span{
+          font-size: 1.5rem;
+        }
+        p{
+          font-size: 1rem;
+        }
+        button{
+          margin-top: 30px;
+        }
+      }
+    }
+    .special{
+      margin-bottom: 50px;
+      .box-special-text{
+        margin-top: 30px;
+        .lite{
+          font-size: 1rem;
+        }
+        h2{
+          padding: 20px 0;
+          font-size: 1.5rem;
+        }
+        p{
+          font-size: 0.9rem;
+          padding: 0 4%;
+        }
+      }
+      .offer-card{
+        flex-direction: column;
+        .card{
+          padding: 0 10px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 50px;
+          h3,
+          .price{
+            font-size: @h3Size - 0.2rem;
+          }
+          ul{
+            li{
+              font-size: 0.9rem;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+    .contacts{
+      flex-direction: column;
+      .contact{
+        padding-left: 10px;
+        justify-content: flex-start;
+        width: 100%;
+        .r{
+          margin-top: 30px;
+          span{
+            font-size: 1rem;
+          }
+          h3{
+            font-size: @spanSize - 0.5rem;
+            margin-bottom: 40px;
+          }
+          p{
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .map{
+        width: 100%;
+        iframe{
+          height: 350px;
+        }
+      }
+    }
+
+  }
+
+  .footer{
+    .row{
+      span{
+        font-size: @btnSend - .1rem;
+        margin-bottom: 20px;
+      }
+      p{
+        font-size: @h2Size - .5rem;
+        margin-bottom: 30px;
+      }
+      .social{
+        a{
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 1.5rem;
+          margin-right: 4px;
+        }
+      }
+    }
+
+  }
+}

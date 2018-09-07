@@ -1,0 +1,441 @@
+ // out: ../css/style.css, sourceMap: trye
+
+/*  ШРИФТЫ	 */
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&subset=cyrillic');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Rubik', sans-serif;
+}
+a{
+	text-decoration: none;
+}
+.container{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	max-width: 1080px;
+}
+.row{
+	padding: 15px;
+	width: 100%;
+	height: 100%;
+}
+
+.lite(){
+	color: @spanColor;
+	font-size: 1.25rem;
+	font-weight: 300;
+	font-style: normal;
+}
+
+
+/* ПЕРЕМЕННЫЕ ЦВЕТ */
+@pinkColor: #e77785;
+@liteGrayColor: #616161;
+@whiteColor: #fff;
+@spanColor: #282828;
+@colorHover: #000;
+
+/*  ПЕРЕМЕННЫЕ РАЗМЕР ШРИФТА  */
+@h1Size: 4.5rem;
+@h2Size: 2.25rem;
+@h3Size: 1.5rem;
+@spanSize: 2.25rem;
+@btnMore: 0.875rem;
+@btnSend: 1.25rem;
+
+
+
+.header{
+	width: 100%;
+	height: 1000px;
+	background-image: url(../images/start-page.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	margin-bottom: 60px;
+	.title{
+		width: 60%;
+		height: 100%;
+		padding: 40% 0 10% 0;
+		.lite();
+		h1{
+			font-size: @h1Size;
+			margin-top: 25px;
+		}
+		.pink{
+			color: @pinkColor;
+			font-size: @h1Size;
+			font-weight: bold;
+			line-height: 0.4;
+		}
+	}
+}
+
+main{
+	.services{
+		span{
+			font-weight: 700;
+		}
+		.listOfServices{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			.service{
+				width: 25%;
+				display: flex;
+				-webkit-flex-wrap: wrap;
+				    -ms-flex-wrap: wrap;
+				        flex-wrap: wrap;
+				flex-flow:  column;
+				padding: 40px;
+				.image{
+					text-align: right;
+					img{
+						width: 81px;
+						-webkit-border-radius: 50%;
+						        border-radius: 50%;
+					}
+				}
+				
+				span{
+					font-weight: 400;
+					color: @spanColor;
+					margin: 40px 0;
+					font-size: 1.1rem;
+				}
+				p{
+					color: @liteGrayColor;
+				}
+			}
+			.offer{
+				padding: 40px 0;
+				width: 25%;
+				display: flex;
+				-webkit-flex-flow: column;
+				    -ms-flex-flow: column;
+				        flex-flow: column;
+				h2{ 
+					padding: 15px 0;
+					color: @pinkColor;
+				}
+				p{
+					margin: 25px 0;
+					color: @liteGrayColor;
+				}
+				a{
+					color: #FFF;
+					text-align: center;
+					padding: 10px;
+					width: 60%;
+					font-weight: 300;
+					font-size: @btnMore;
+					background-color: @pinkColor;
+			        border-radius: 20px;
+			        &:hover{
+			        	color: @colorHover;
+			        }
+				}
+			}
+		}
+	}
+
+	.advantage{
+		width: 100%;
+		min-height: 700px;
+		background-image: url(../images/advantages.jpg);
+		background-repeat: no-repeat;
+		background-position: top left;
+		background-color: #FFF;
+		-webkit-background-size: 50%;
+		     -o-background-size: 50%;
+		        background-size: 800px;
+		.advantag-box{
+			width: 55%;
+			float: right;
+			.advantage-text{
+				width: 100%;
+				padding-top: 50px;
+				.adv-title{
+					margin-bottom: 15px;
+					font-weight: 300;
+					font-size: @h2Size - 0.25rem;
+				}
+				.text{
+					margin-bottom: 20px;
+					color: @liteGrayColor;
+				}
+			}
+			.advantage-list{
+				width: 100%;
+				margin-top: 4.375rem;
+				.list{
+					width: 100%;
+					display: flex;
+					-webkit-justify-content: flex-end;
+					        justify-content: flex-end;
+					margin-bottom: 50px;
+					.fas{
+						margin-right: 5%;
+						font-size: 3.6rem;
+						color: @pinkColor;
+						line-height: 1.4;
+					}
+					.list-text{
+						width: 50%;
+						line-height: 1.4;
+						font-size: @h3Size;
+						p{
+							font-weight: 100;
+							color: @spanColor;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.sale{
+		width: 100%;
+		height: 500px;
+		background-image: url(../images/application-bg.jpg);
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-color: @pinkColor;
+		-webkit-background-size: 100%;
+		     -o-background-size: 100%;
+		        background-size: 100%;
+		.sale-box{
+			width: 100%;
+			margin-top: 10%;
+			text-align: center;
+			color: @whiteColor;
+			span{
+				font-size: @h1Size;
+				font-weight: 700;
+			}
+			p{
+				font-size: 1.375rem;
+				font-weight: 300;
+				padding: 5% 0;
+			}
+			button{
+				font-size: @btnSend;
+				border-radius: 30px;
+				padding: 10px 15px;
+				font-weight: 300;
+				outline: none;
+				border: none;
+				background-color: #000;
+				color: @whiteColor;
+				transition: transform .1s ease;
+				transform: scale(1);
+				cursor: pointer;
+				&:hover{
+					color: @pinkColor;
+				}
+				&:focus{
+					transform: scale(0.98);
+				}
+			}
+		}
+	}
+
+	.special{
+		width: 100%;
+		height: 100%;
+		margin-bottom: 150px;
+		.box-special-text{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			margin-top: 80px;
+			.lite();
+			h2{
+				font-size: 2.65rem;
+				padding: 40px 0;
+			}
+			p{
+				font-size: 1rem;
+				color: @liteGrayColor;
+				padding: 0 12%;
+				font-weight: 300;
+			}
+		}
+		.offer-card{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 60px;
+			.card{
+				width: 23%;
+				img{
+					width: 100%;
+					border-radius: 50px;
+				}
+				h3{
+					font-size: @h3Size;
+					font-weight: 300;
+					padding-top: 30px;
+					padding-bottom: 15px; 
+				}
+				.price{
+					color: @pinkColor;
+					font-weight: 500;
+					font-size: @h3Size;
+				}
+				ul{
+					 padding: 25px 20px;
+					 li{
+						 font-size: 1rem;
+						 color: @pinkColor;
+						 span{
+							 color: @liteGrayColor;
+						 }
+					 }
+				}
+				button{
+					padding: 10px 20px;
+					background-color: @pinkColor;
+					border: none;
+					outline: none;
+					border-radius: 30px;
+					color: @whiteColor;
+					font-size: @btnMore;
+					font-weight: 300;
+					cursor: pointer;
+					&:hover{
+						background-color: #000;
+						color: @pinkColor;
+					}
+				}
+			}
+		}
+
+		
+	}
+
+	.slider{
+		width: 100%;
+		height: 500px;
+		background: url(../images/slider/slider-bg.jpg) no-repeat;
+		background-size: 100%;
+		color: @whiteColor;
+		.opacity{
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.795);
+			.wrapper-slider{
+				width: 100%;
+				height: 100%;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+				.slide{
+					width: 80%;
+					position: absolute;
+					text-align: center;
+					.name{
+						margin-top: 20px;
+						color: @pinkColor;
+						font-weight: 500;
+					}
+					.comment{
+						margin-top: 20px;
+						font-size: @btnSend;
+					}
+				}
+			}
+		}
+	}
+
+	.contacts{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		.contact{
+			width: 50%;
+			background: @spanColor;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: @whiteColor;
+			.r{
+				span{
+				font-size: @btnSend;
+				font-weight: 300;
+			}
+				h3{
+					color: @pinkColor;
+					font-size: @spanSize;
+					margin-bottom: 60px;
+					margin-top: 15px;
+
+				}
+				p{
+					margin-bottom: 25px;
+					font-weight: 300;
+					.fas,
+					.far{
+						margin-right: 15px;
+						color: @pinkColor;
+					}
+				}
+			}
+		}
+		.map{
+			width: 50%;
+		}
+	}
+}
+
+.footer{
+	width: 100%;
+	height: 100%;
+	.row{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		span{
+			font-size: @btnSend;
+			margin: 50px 0 40px 0;
+			font-weight: 300;
+		}
+		p{
+			margin-bottom: 80px;
+			font-weight: 600;
+			font-size: @h2Size;
+		}
+		.social{
+			padding-bottom: 40px;
+			a{
+				display: inline-block;
+				text-align: center;
+				border-radius: 50%;
+				line-height: 50px;
+				width: 50px;
+				height: 50px;
+				font-size: 1.8rem;
+				color: @whiteColor;
+				background: @pinkColor;
+				margin-right: 15px;
+				transition: .5s;
+				&:hover{
+					background: @colorHover;
+					color: @pinkColor;
+				}
+			}
+		}
+	}
+}
+
+
+
