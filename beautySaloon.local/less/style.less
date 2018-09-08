@@ -3,6 +3,9 @@
 /*  ШРИФТЫ	 */
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&subset=cyrillic');
 
+body{
+	position: relative;
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -46,6 +49,76 @@ a{
 @spanSize: 2.25rem;
 @btnMore: 0.875rem;
 @btnSend: 1.25rem;
+
+
+
+
+// МОДАЛЬНЕ ОКНО
+article{
+	z-index: 100;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.664);
+	.modal{
+		position: relative;
+		top: 100px;
+		margin: auto;
+		border-radius: 10px;
+		width: 420px;
+		height: 300px;
+		background: #fff;
+
+		.row{	
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			.exit{
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				background: red;
+				cursor: pointer;
+			}
+			h3{
+				font-size: 1.625rem;
+				font-weight: 400;
+			}
+			form{
+				text-align: center;
+				padding-top: 20px;
+				input{
+					width: 100%;
+					border: 1px solid #e3e3e3;
+					color: rgba(145, 145, 145, 1);
+					border-radius: 20px;
+					padding: 10px 15px;
+					margin: 5px 0;
+					outline: none;
+					font-size: 0.85rem;
+					&:focus{
+						box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+					}
+				}
+				button{
+					padding: 10px 20px;
+					background-color: @pinkColor;
+					border: none;
+					outline: none;
+					border-radius: 30px;
+					color: @whiteColor;
+					font-size: @btnMore + .5rem;
+					font-weight: 300;
+					cursor: pointer;
+					margin-top: 40px;
+				}
+			}
+		}
+	}
+}
 
 
 
