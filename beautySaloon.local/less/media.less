@@ -240,6 +240,22 @@
 
 
 @media (min-width: 400px) and (max-width: 1024px){
+  .header{
+    height: 500px;
+    position: relative;
+    background-size: 1000px;
+    .title{
+      position: absolute;
+      padding: 0;
+      bottom: -200px;
+      h1,
+      .pink{
+        font-size: @h1Size - 2rem;
+      }
+    }
+  }
+
+
   main{
     overflow: hidden;
     .services{
@@ -257,8 +273,8 @@
           .image{
             text-align: center;
           }
-          span{
-
+          .title-service{
+            margin: 15px 0;
           }
         }
         .offer{
