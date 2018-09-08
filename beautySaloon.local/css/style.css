@@ -111,7 +111,7 @@ main .services .listOfServices .offer a {
   border-radius: 20px;
 }
 main .services .listOfServices .offer a:hover {
-  color: #eee;
+  color: #000;
 }
 main .advantage {
   width: 100%;
@@ -395,7 +395,7 @@ main .contacts .map {
   transition: .5s;
 }
 .footer .row .social a:hover {
-  background: #eee;
+  background: #000;
   color: #e77785;
 }
 /*# sourceMappingURL=./style.css.map */
