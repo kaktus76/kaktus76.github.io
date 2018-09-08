@@ -44,7 +44,7 @@ a {
   margin-top: 25px;
 }
 .header .title .pink {
-  color: #e77785;
+  color: #000;
   font-size: 4.5rem;
   font-weight: bold;
   line-height: 0.4;
@@ -94,7 +94,7 @@ main .services .listOfServices .offer {
 }
 main .services .listOfServices .offer h2 {
   padding: 15px 0;
-  color: #e77785;
+  color: #000;
 }
 main .services .listOfServices .offer p {
   margin: 25px 0;
@@ -107,7 +107,7 @@ main .services .listOfServices .offer a {
   width: 60%;
   font-weight: 300;
   font-size: 0.875rem;
-  background-color: #e77785;
+  background-color: #000;
   border-radius: 20px;
 }
 main .services .listOfServices .offer a:hover {
@@ -155,7 +155,7 @@ main .advantage .advantag-box .advantage-list .list {
 main .advantage .advantag-box .advantage-list .list .fas {
   margin-right: 5%;
   font-size: 3.6rem;
-  color: #e77785;
+  color: #000;
   line-height: 1.4;
 }
 main .advantage .advantag-box .advantage-list .list .list-text {
@@ -173,7 +173,7 @@ main .sale {
   background-image: url(../images/application-bg.jpg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-color: #e77785;
+  background-color: #000;
   -webkit-background-size: 100%;
   -o-background-size: 100%;
   background-size: 100%;
@@ -207,7 +207,7 @@ main .sale .sale-box button {
   cursor: pointer;
 }
 main .sale .sale-box button:hover {
-  color: #e77785;
+  color: #000;
 }
 main .sale .sale-box button:focus {
   transform: scale(0.98);
@@ -258,7 +258,7 @@ main .special .offer-card .card h3 {
   padding-bottom: 15px;
 }
 main .special .offer-card .card .price {
-  color: #e77785;
+  color: #000;
   font-weight: 500;
   font-size: 1.5rem;
 }
@@ -267,14 +267,14 @@ main .special .offer-card .card ul {
 }
 main .special .offer-card .card ul li {
   font-size: 1rem;
-  color: #e77785;
+  color: #000;
 }
 main .special .offer-card .card ul li span {
   color: #616161;
 }
 main .special .offer-card .card button {
   padding: 10px 20px;
-  background-color: #e77785;
+  background-color: #000;
   border: none;
   outline: none;
   border-radius: 30px;
@@ -285,7 +285,7 @@ main .special .offer-card .card button {
 }
 main .special .offer-card .card button:hover {
   background-color: #000;
-  color: #e77785;
+  color: #000;
 }
 main .slider {
   width: 100%;
@@ -315,7 +315,7 @@ main .slider .opacity .wrapper-slider .slide {
 }
 main .slider .opacity .wrapper-slider .slide .name {
   margin-top: 20px;
-  color: #e77785;
+  color: #000;
   font-weight: 500;
 }
 main .slider .opacity .wrapper-slider .slide .comment {
@@ -341,7 +341,7 @@ main .contacts .contact .r span {
   font-weight: 300;
 }
 main .contacts .contact .r h3 {
-  color: #e77785;
+  color: #000;
   font-size: 2.25rem;
   margin-bottom: 60px;
   margin-top: 15px;
@@ -353,7 +353,7 @@ main .contacts .contact .r p {
 main .contacts .contact .r p .fas,
 main .contacts .contact .r p .far {
   margin-right: 15px;
-  color: #e77785;
+  color: #000;
 }
 main .contacts .map {
   width: 50%;
@@ -390,12 +390,12 @@ main .contacts .map {
   height: 50px;
   font-size: 1.8rem;
   color: #fff;
-  background: #e77785;
+  background: #000;
   margin-right: 15px;
   transition: .5s;
 }
 .footer .row .social a:hover {
   background: #000;
-  color: #e77785;
+  color: #000;
 }
 /*# sourceMappingURL=./style.css.map */
