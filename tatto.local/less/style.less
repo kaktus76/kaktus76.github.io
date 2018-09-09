@@ -1,0 +1,588 @@
+//out: ../css/style.css
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic');
+
+/* Variables */
+@btnColor: #000;
+@linkColor: #fff;
+@borderColor: #e0e0e0;
+
+@fzP: 1.2rem;
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 16px;
+	
+}
+a{text-decoration: none;color: @linkColor;}
+// КНОПКА БУРГЕР
+input{
+	display: none;
+}
+.menu-toggle{
+	display: none;
+}
+// КОНЕЦ КНОПКИ
+
+
+h2{
+	padding: 25px;
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-align: center;
+}
+button{
+	font-size: 1.7rem;
+	width: 40%;
+	height: 60px;
+	background: @btnColor;
+	color: #fff;
+	outline: none;
+	border: 1px solid #000;
+	margin-bottom: 20px;
+	transition: .5s;
+	&:hover{
+		background: #fff;
+		color: #000;
+	}
+}
+.container{
+	max-width: 940px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+.row{
+	width: 100%;
+	height: 100%;
+	padding: 0 15px;
+}
+.entry-text{
+	margin-top: 70px;
+	text-align: center;
+	.text,
+	.issues{
+		font-size: 1.7rem;;
+		margin-bottom: 20px;
+	}
+	button{
+		font-size: 1.7rem;
+		width: 400px;
+		height: 60px;
+		background: @btnColor;
+		color: #fff;
+		outline: none;
+		border: 1px solid #000;
+		margin-bottom: 20px;
+		transition: .5s;
+		&:hover{
+			background: #fff;
+			color: #000;
+		}
+	}
+	.text-bold{
+		font-size: 1.5rem;
+		margin-bottom: 20px;
+		font-weight: bold;
+	}
+	
+}
+
+
+
+header{
+	background-image: url(../images/header-img.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 500px;
+	.row{
+		.title{
+			font-family: 'PT Sans', sans-serif;
+			font-size: 4.2rem;
+			font-weight: bold;
+			line-height: 0.8;
+			text-align: right;
+			padding-top: 5%;		}
+	}
+}
+/* МОДАЛЬНОЕ ОКНО */
+.modal{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	background: hsva(240, 100%, 2%, .5);
+	display: none;
+	.modal-block{
+		position: relative;
+		top: 100px;
+		left: 50%;
+		margin-left: -175px;
+		width: 380px;
+		height: 315px;
+		background: #FFF;
+		p{
+			font-size: 1.2rem;
+			padding: 10px 0;
+		}
+		.close{
+			display: block;
+			position: absolute;
+			top: -10px;
+			right: 10px;
+			width: 20px;
+			height: 20px;
+			svg{
+				width: 100%;
+			}
+		}
+		form{
+			label{
+				font-family: sans-serif;
+				font-weight: lighter;
+				font-size: 0.8rem;
+				input{
+					margin: 5px 0;
+					width: 100%;
+					border: none;
+					border-bottom: 1px solid @borderColor;
+					padding: 5px;
+					outline: none;
+					&::placeholder{
+						font-size: 1rem;
+					}
+				}
+			}
+			
+			span{
+				font-size: 0.9rem;
+			}
+		}
+	}
+}
+
+
+/*  */
+.main{
+
+	.navig{
+		width: 100%;
+		height: auto;
+		background: #333;
+		text-align: center;
+		.menu-toggle{
+			display: none;
+		}
+		a{
+			display: inline-block;
+			padding: 16px 7px;
+			text-transform: uppercase;
+			font-weight: 300;
+			font-size: 0.9rem;
+			position: relative;
+			margin: 0 5px;
+			transition: .3s;
+			&:hover{
+				background: rgba(26, 26, 26, 0.5);
+			}
+			&::after,
+			&::before{
+				content: '';
+				position: absolute;
+				width: 3px;
+				height: 3px;
+				border-radius: 50%;
+				background: @linkColor;
+			}
+			&::after{
+				top: 24px;
+				right: 0;
+			}
+			&::before{
+				top: 24px;
+				left: 0;
+			}
+		}
+	}
+	
+	.entry{
+		background-image: url(../images/pattern_11.png);
+		width: 100%;
+		min-height: 500px;
+		.row{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-top: 60px;
+				.quality{
+					font-size: 1.4rem;
+					font-weight: 700;
+					text-align: center;
+				}
+		}
+		
+	}
+	
+	.work{
+		text-align: center;
+		margin-bottom: 50px;
+		h2{
+			font-size: 2.5rem;
+			font-weight: bold;
+		}
+		p{
+			font-size: 1.4rem;
+			margin-bottom: 20px;
+		}
+		.photos-works{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			.photo{
+				width: 33%;
+				position: relative;
+				margin-top: 5px;
+				&:hover .overlay{
+					transform: scale(1);
+					transform-origin: top center;
+				}
+				img{
+					width: 100%;
+				}
+				.overlay{
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background: #000;
+					opacity: 0.5;
+					transform-origin: bottom center;
+					transform: scale(0);
+					transition: .5s;
+					.fab{
+						font-size: 1.5rem;
+						color: red;
+					}
+					a{
+						display: block;
+						width: 100%;
+						height: 30px;
+						position: absolute;
+						bottom: 40px;
+						color: #fff;
+						font-weight: 400;
+						text-transform: uppercase;
+					}
+				}
+			}
+			
+		}
+	}
+	
+	.social{
+		width: 100%;
+		height: 50px;
+		background: #333;
+		text-align: center;
+		a{
+			line-height: 50px;
+			text-transform: uppercase;
+			font-size: 0.9rem;
+			margin-right: 20px;
+			display: inline-block;
+			position: relative;
+			&:hover::before{
+				transform: scale(0);
+				transform-origin: left;
+			}
+			&::before{
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 10px;
+				width: 100%;
+				height: 1px;
+				background: #fff;
+				transition: .5s;
+			}
+		}
+	}
+	
+	.info{
+		width: 100%;
+		margin-bottom: 20px;
+		.entry-text{
+			margin-top: 70px;
+			text-align: center;
+			.text,
+			.issues{
+				font-size: 1.7rem;;
+				margin-bottom: 20px;
+			}
+			.text-bold{
+				font-size: 1.5rem;
+				margin-bottom: 20px;
+				font-weight: bold;
+			}
+		}
+		h2{
+			text-align: center;
+		}		
+		.block-info{
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			padding: 10px 0;
+			border-bottom: 1px solid @borderColor;
+			&:nth-child(4){
+				border-bottom: none;
+			}
+			.image{
+				width: 50%;
+				padding: 7px;
+				border: 1px solid @borderColor;
+				img{
+					width: 100%;
+				}
+			}
+			.text{
+				padding: 0 10px;
+				width: 50%;
+				h3{
+					display: block;
+					padding: 10px;
+					margin-bottom: 4px;
+					font-size: 1.8rem;
+					font-weight: 100;
+					border-bottom: 1px solid @borderColor;
+				}
+				p{
+					font-size: @fzP;
+					text-indent: 20px;
+				}
+				.list{
+					text-indent: 0;
+				}
+			}
+		}
+	}
+	
+	.correction{
+		position: relative;
+		width: 100%;
+		min-height: 700px;
+		background: url(../images/pattern_11.png);
+		.overlap{
+			width: 100%;
+			display: flex;
+			-webkit-justify-content: center;
+			        justify-content: center;
+			-webkit-align-items: flex-start;
+			        align-items: flex-start;
+			flex-wrap: wrap;
+			.image{
+				width: 50%;
+				padding: 8px;
+				border: 1px solid @borderColor;
+				background: #FFF;
+				img{
+					width: 100%;
+					
+				}
+			}
+			.text{
+				width: 50%;
+				padding: 0 25px;
+				text-align: justify;
+				p{
+					font-size: @fzP;
+					text-indent: 20px;
+				}
+			}
+			.list{
+				text-align: left;
+				width: 100%;
+				padding-top: 25px;
+				p{
+					font-size: 1.1rem;
+				}
+				ul{
+					display: block;
+					padding-top: 15px;
+					padding-left: 40px;
+					font-size: 1.1rem;
+				}
+			}
+		}
+	}
+
+	.old-age{
+		position: relative;
+		width: 100%;
+		header{
+			background-image: url(../images/TattooInOldAge/old-fon.jpg);
+			background-size: cover;
+			width: 100%;
+			height: 500px;
+			.title{
+				color: #FFF;
+				font-size: 2.5rem;
+				line-height: 1.1;
+			}
+		}
+		p{
+			text-align: center;
+			padding: 20px 0;
+			font-size: 1.75rem;
+			line-height: 1;
+		}
+		.photo-old-age{
+			width: 100%;
+			margin-bottom: 50px;
+			display: flex;
+			-webkit-justify-content: space-between;
+			        justify-content: space-between;
+			-webkit-align-content: center;
+			        align-content: center;
+			    -webkit-flex-wrap: wrap;
+			        -ms-flex-wrap: wrap;
+			            flex-wrap: wrap;
+			    .photo{
+			    	width: 24%;
+			    	padding: 10px;
+			    	border: 1px solid @borderColor;
+			    	margin-bottom: 30px;
+			    	img{
+			    		width: 100%;
+			    	}
+			    }
+		}
+		.entry-bg-bold{
+			background: #3D3D3D;
+			background-image: url(../images/pattern_11.png);
+			background-position: center center;
+			background-repeat: repeat;
+			color: #fff;
+			text-align: center;
+			button{
+				background: #000!important;
+				margin-bottom: 0;
+				&:hover{
+					background: #FFF!important;
+				}
+			}
+		}
+	}
+
+	.map{
+		width: 100%;
+		height: 500px;
+		position: relative;
+		overflow: hidden;
+		.row{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 400px;
+			height: auto;
+			margin-top: -180px;
+			background: rgba(255,255,255,0.8);
+			border: 1px solid @borderColor;
+			font-size: 1.375rem;
+			padding: 30px;
+			text-align: left;
+			strong{
+				font-size: 1.3rem;
+			}
+		}
+	}
+}
+footer{
+	position: relative;
+	background: #3D3D3D;
+	background-image: url(../images/pattern_11.png);
+	background-position: center center;
+	background-repeat: repeat;
+	color: #fff;
+	min-height: 80px;
+	height: auto;
+	line-height: 2;
+	.row{
+		display: flex;
+		-webkit-justify-content: space-between;
+		        justify-content: space-between;
+		-webkit-align-items: center;
+		        align-items: center;
+		-webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		        flex-wrap: wrap;
+	    input{
+	    	display: block !important;
+			height: 30px;
+			width: 171px;
+			position: absolute;
+			top: -60px;
+			left: 20%;
+			z-index: 20;
+			&:checked ~ .policy{
+				display: none;
+			}
+
+		}
+		.policy{
+			// position: absolute;
+			width: 100%;
+			height: auto;
+			// top: 100px;
+			// left: 0;
+			display: block;
+			background: #FFF;
+			margin: 20px;
+			
+			h3{
+				color: #000;
+				font-size: 1.23rem;
+			}
+			p{
+				color: #000;
+				font-size: 0.95rem;
+			}
+		}
+		.name{
+			width: 20%;
+			h3{
+				font-size: 1.7rem;
+				line-height: 1;
+				font-weight: 100;
+			}
+		}
+		.ooo{
+			width: 50%;
+			p{
+				font-size: 0.81rem;
+			}
+			a{
+				border-bottom: 1px dashed #fff;
+				&:hover{
+					border-bottom: transparent;
+				}
+			}
+		}
+		.time{
+			width: 25%;
+			p{
+				font-size: 1.75rem;
+			}
+		}
+	}
+}
+

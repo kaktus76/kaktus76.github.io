@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic');
+/* Fonts */
+/* Variables */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+input {
+  display: none;
+}
+.menu-toggle {
+  display: none;
+}
+h2 {
+  padding: 25px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+button {
+  font-size: 1.7rem;
+  width: 40%;
+  height: 60px;
+  background: #000000;
+  color: #fff;
+  outline: none;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+button:hover {
+  background: #fff;
+  color: #000;
+}
+.container {
+  max-width: 940px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.row {
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+}
+.entry-text {
+  margin-top: 70px;
+  text-align: center;
+}
+.entry-text .text,
+.entry-text .issues {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+.entry-text button {
+  font-size: 1.7rem;
+  width: 400px;
+  height: 60px;
+  background: #000000;
+  color: #fff;
+  outline: none;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.entry-text button:hover {
+  background: #fff;
+  color: #000;
+}
+.entry-text .text-bold {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+header {
+  background-image: url(../images/header-img.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+header .row .title {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 4.2rem;
+  font-weight: bold;
+  line-height: 0.8;
+  text-align: right;
+  padding-top: 5%;
+}
+/* МОДАЛЬНОЕ ОКНО */
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 5, 0.5);
+  display: none;
+}
+.modal .modal-block {
+  position: relative;
+  top: 100px;
+  left: 50%;
+  margin-left: -175px;
+  width: 380px;
+  height: 315px;
+  background: #FFF;
+}
+.modal .modal-block p {
+  font-size: 1.2rem;
+  padding: 10px 0;
+}
+.modal .modal-block .close {
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+}
+.modal .modal-block .close svg {
+  width: 100%;
+}
+.modal .modal-block form label {
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 0.8rem;
+}
+.modal .modal-block form label input {
+  margin: 5px 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 5px;
+  outline: none;
+}
+.modal .modal-block form label input::-webkit-input-placeholder {
+  font-size: 1rem;
+}
+.modal .modal-block form label input:-ms-input-placeholder {
+  font-size: 1rem;
+}
+.modal .modal-block form label input::-ms-input-placeholder {
+  font-size: 1rem;
+}
+.modal .modal-block form label input::placeholder {
+  font-size: 1rem;
+}
+.modal .modal-block form span {
+  font-size: 0.9rem;
+}
+/*  */
+.main .navig {
+  width: 100%;
+  height: auto;
+  background: #333;
+  text-align: center;
+}
+.main .navig .menu-toggle {
+  display: none;
+}
+.main .navig a {
+  display: inline-block;
+  padding: 16px 7px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.9rem;
+  position: relative;
+  margin: 0 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.main .navig a:hover {
+  background: rgba(26, 26, 26, 0.5);
+}
+.main .navig a::after,
+.main .navig a::before {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+.main .navig a::after {
+  top: 24px;
+  right: 0;
+}
+.main .navig a::before {
+  top: 24px;
+  left: 0;
+}
+.main .entry {
+  background-image: url(../images/pattern_11.png);
+  width: 100%;
+  min-height: 500px;
+}
+.main .entry .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 60px;
+}
+.main .entry .row .quality {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+.main .work {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.main .work h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.main .work p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+.main .work .photos-works {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.main .work .photos-works .photo {
+  width: 33%;
+  position: relative;
+  margin-top: 5px;
+}
+.main .work .photos-works .photo:hover .overlay {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+}
+.main .work .photos-works .photo img {
+  width: 100%;
+}
+.main .work .photos-works .photo .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.main .work .photos-works .photo .overlay .fab {
+  font-size: 1.5rem;
+  color: red;
+}
+.main .work .photos-works .photo .overlay a {
+  display: block;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 40px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.main .social {
+  width: 100%;
+  height: 50px;
+  background: #333;
+  text-align: center;
+}
+.main .social a {
+  line-height: 50px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-right: 20px;
+  display: inline-block;
+  position: relative;
+}
+.main .social a:hover::before {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+.main .social a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.main .info {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.main .info .entry-text {
+  margin-top: 70px;
+  text-align: center;
+}
+.main .info .entry-text .text,
+.main .info .entry-text .issues {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+.main .info .entry-text .text-bold {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.main .info h2 {
+  text-align: center;
+}
+.main .info .block-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.main .info .block-info:nth-child(4) {
+  border-bottom: none;
+}
+.main .info .block-info .image {
+  width: 50%;
+  padding: 7px;
+  border: 1px solid #e0e0e0;
+}
+.main .info .block-info .image img {
+  width: 100%;
+}
+.main .info .block-info .text {
+  padding: 0 10px;
+  width: 50%;
+}
+.main .info .block-info .text h3 {
+  display: block;
+  padding: 10px;
+  margin-bottom: 4px;
+  font-size: 1.8rem;
+  font-weight: 100;
+  border-bottom: 1px solid #e0e0e0;
+}
+.main .info .block-info .text p {
+  font-size: 1.2rem;
+  text-indent: 20px;
+}
+.main .info .block-info .text .list {
+  text-indent: 0;
+}
+.main .correction {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  background: url(../images/pattern_11.png);
+}
+.main .correction .overlap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.main .correction .overlap .image {
+  width: 50%;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  background: #FFF;
+}
+.main .correction .overlap .image img {
+  width: 100%;
+}
+.main .correction .overlap .text {
+  width: 50%;
+  padding: 0 25px;
+  text-align: justify;
+}
+.main .correction .overlap .text p {
+  font-size: 1.2rem;
+  text-indent: 20px;
+}
+.main .correction .overlap .list {
+  text-align: left;
+  width: 100%;
+  padding-top: 25px;
+}
+.main .correction .overlap .list p {
+  font-size: 1.1rem;
+}
+.main .correction .overlap .list ul {
+  display: block;
+  padding-top: 15px;
+  padding-left: 40px;
+  font-size: 1.1rem;
+}
+.main .old-age {
+  position: relative;
+  width: 100%;
+}
+.main .old-age header {
+  background-image: url(../images/TattooInOldAge/old-fon.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+.main .old-age header .title {
+  color: #FFF;
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+.main .old-age p {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+.main .old-age .photo-old-age {
+  width: 100%;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.main .old-age .photo-old-age .photo {
+  width: 24%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+.main .old-age .photo-old-age .photo img {
+  width: 100%;
+}
+.main .old-age .entry-bg-bold {
+  background: #3D3D3D;
+  background-image: url(../images/pattern_11.png);
+  background-position: center center;
+  background-repeat: repeat;
+  color: #fff;
+  text-align: center;
+}
+.main .old-age .entry-bg-bold button {
+  background: #000!important;
+  margin-bottom: 0;
+}
+.main .old-age .entry-bg-bold button:hover {
+  background: #FFF!important;
+}
+.main .map {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.main .map .row {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: auto;
+  margin-top: -180px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e0e0e0;
+  font-size: 1.375rem;
+  padding: 30px;
+  text-align: left;
+}
+.main .map .row strong {
+  font-size: 1.3rem;
+}
+footer {
+  position: relative;
+  background: #3D3D3D;
+  background-image: url(../images/pattern_11.png);
+  background-position: center center;
+  background-repeat: repeat;
+  color: #fff;
+  min-height: 80px;
+  height: auto;
+  line-height: 2;
+}
+footer .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+footer .row input {
+  display: block !important;
+  height: 30px;
+  width: 171px;
+  position: absolute;
+  top: -60px;
+  left: 20%;
+  z-index: 20;
+}
+footer .row input:checked ~ .policy {
+  display: none;
+}
+footer .row .policy {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #FFF;
+  margin: 20px;
+}
+footer .row .policy h3 {
+  color: #000;
+  font-size: 1.23rem;
+}
+footer .row .policy p {
+  color: #000;
+  font-size: 0.95rem;
+}
+footer .row .name {
+  width: 20%;
+}
+footer .row .name h3 {
+  font-size: 1.7rem;
+  line-height: 1;
+  font-weight: 100;
+}
+footer .row .ooo {
+  width: 50%;
+}
+footer .row .ooo p {
+  font-size: 0.81rem;
+}
+footer .row .ooo a {
+  border-bottom: 1px dashed #fff;
+}
+footer .row .ooo a:hover {
+  border-bottom: transparent;
+}
+footer .row .time {
+  width: 25%;
+}
+footer .row .time p {
+  font-size: 1.75rem;
+}
+/*# sourceMappingURL=style.css.map */
