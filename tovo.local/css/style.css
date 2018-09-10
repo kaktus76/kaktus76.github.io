@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900');
+@keyframes circle {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  color: #444444;
+}
+.box {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background-image: url(../images/team-img-bg.png);
+  background-size: cover;
+  top: 2px;
+  left: 100px;
+}
+.box .circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background: linear-gradient(to bottom, #42ffd0 0%, #42ffd0 8%, #37d2ed 75%, #37d2ed 100%);
+  animation: circle 2s infinite alternate linear;
+  box-shadow: 55px 55px 50px 1px rgba(85, 84, 84, 0.11);
+}
+.box .circle .circle-white {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  border-radius: 100%;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+}
