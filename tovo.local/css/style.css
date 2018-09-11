@@ -7,7 +7,7 @@
     transform: translateY(25px);
   }
   100% {
-    transform: translateY(50px);
+    transform: translateY(0);
   }
 }
 * {
@@ -20,32 +20,137 @@
 body {
   color: #444444;
 }
-.box {
-  width: 150px;
-  height: 150px;
-  position: relative;
-  background-image: url(../images/team-img-bg.png);
-  background-size: cover;
-  top: 2px;
-  left: 100px;
+a {
+  text-decoration: none;
 }
-.box .circle {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  background: linear-gradient(to bottom, #42ffd0 0%, #42ffd0 8%, #37d2ed 75%, #37d2ed 100%);
-  animation: circle 2s infinite alternate linear;
-  box-shadow: 55px 55px 50px 1px rgba(85, 84, 84, 0.11);
+ul {
+  list-style: none;
 }
-.box .circle .circle-white {
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+.row {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.f-bold {
+  font-weight: 700;
+}
+.fixed-nav {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/head-bg.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.header .home-decor {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -25px;
-  margin-top: -25px;
-  border-radius: 100%;
-  background: #fff;
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: auto;
 }
+.header .home-decor .circle3 {
+  position: absolute;
+  top: 185px;
+  left: 75px;
+  animation: circle 3s infinite linear;
+}
+.header .home-decor .circle2 {
+  position: absolute;
+  top: 120px;
+  right: 80px;
+  animation: circle 2.8s infinite linear;
+}
+.header .home-decor .circle1 {
+  position: absolute;
+  top: 230px;
+  right: 100px;
+  animation: circle 3.2s infinite linear;
+}
+.header .navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .navbar .logo {
+  display: block;
+  width: auto;
+}
+.header .navbar .navbar-box {
+  width: 80%;
+}
+.header .navbar .navbar-box .navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header .navbar .navbar-box .navbar-nav .nav-item {
+  margin-left: 20px;
+}
+.header .navbar .navbar-box .navbar-nav .nav-item .nav-link {
+  text-transform: uppercase;
+  color: #777777;
+}
+.header .navbar .navbar-box .navbar-nav .nav-item .active {
+  color: #18e7d3;
+}
+.header .home {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.header .home .title {
+  width: 45%;
+  height: calc(76vh);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.header .home .title .title-img {
+  width: 47px;
+}
+.header .home .title .title-text {
+  font-weight: 700;
+  color: #444444;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.header .home .title h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 4.2rem;
+  color: #18e7d3;
+}
+.header .home .title h1 .f-bold {
+  font-size: 4.2rem;
+}
+.header .home .title h1 .f-color {
+  color: #444444;
+  font-size: 4.2rem;
+}
+.header .home .title h1 p {
+  color: #777777;
+}
+.header .home .title .market {
+  margin-top: 20px;
+}
+.header .home .home-phone {
+  width: 55%;
+}
+.header .home .home-phone img {
+  width: 70%;
+}
+/*# sourceMappingURL=./style.css.map */

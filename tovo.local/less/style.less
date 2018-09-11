@@ -1,4 +1,4 @@
-//out: ../css/style.css
+// out: ../css/style.css, sourceMap: trye
 
 // ШРИФТЫ
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900');
@@ -23,7 +23,7 @@
 		transform: translateY(25px);
 	}
 	100% {
-		transform: translateY(50px);
+		transform: translateY(0);
 	}
 }
 
@@ -39,37 +39,154 @@
 body{
 	color: @main-color-text;
 }
-
-.box{
-	width: 150px;
-	height: 150px;
-	position: relative;
-	background-image: url(../images/team-img-bg.png);
-	background-size: cover;
-	top: 2px;
-	left: 100px;
-	.circle{
-		position: relative;
-		width: 100px;
-		height: 100px;
-		border-radius: 100%;
-		background: linear-gradient(to bottom, #42ffd0 0%, #42ffd0 8%, #37d2ed 75%, #37d2ed 100%);
-		// border: 30px solid @main-color;
-		animation: circle 2s infinite alternate linear;
-		box-shadow: 55px 55px 50px 1px rgba(85, 84, 84, 0.11);
-		.circle-white{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin-left: -25px;
-			margin-top: -25px;
-			border-radius: 100%;
-			background: #fff;
-			width: 50px;
-			height: 50px;
-		}
-	}
-
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+.container{
+	max-width: 1140px;
+	margin: auto;
+}
+.row{
+	padding-left: 15px;
+	padding-right: 15px;
+	// display: flex;
+	// flex-wrap: wrap;
+}
+.f-bold{
+	font-weight: 700;
 }
 
 
+
+
+// Start Header Style
+
+.fixed-nav{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.header{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url(../images/head-bg.png);
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	// background: #dbd6d6;
+
+		
+	.home-decor{
+		position: absolute;
+		width: 100%;
+		height: auto;
+		.circle3{
+			position: absolute;
+			top: 185px;
+			left: 75px;
+			animation: circle 3s infinite linear;
+		}
+		.circle2{
+			position: absolute;
+			top: 120px;
+			right: 80px;
+			animation: circle 2.8s infinite linear;
+		}
+		.circle1{
+			position: absolute;
+			top: 230px;
+			right: 100px;
+			animation: circle 3.2s infinite linear;
+		}
+	}
+
+
+
+	// Style navbar
+	.navbar{
+		width: 100%;
+		height: 80px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.logo{
+			display: block;
+			width: auto;
+		}
+		.navbar-box{
+			width: 80%;
+			.navbar-nav{
+				width: 100%;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				.nav-item{
+					margin-left: 20px;
+					.nav-link{
+						text-transform: uppercase;
+						color: @lite-color-text;
+					}
+					.active{
+						color: @main-color;
+					}
+				}
+			}
+		}
+	}
+	// End Style Navbar
+
+	// Style Home Page
+	.home{
+		position: relative;
+		z-index: 100;
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		.title{
+			width: 45%;
+			height: calc(100vh - 24px);
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			.title-img{
+				width: 47px;
+			}
+			.title-text{
+				font-weight: 700;
+				color: @main-color-text;
+				font-size: 1.2rem;
+				text-transform: uppercase;
+			}
+			h1{
+				text-transform: uppercase;
+				font-weight: 300;
+				font-size: 4.2rem;
+				color: @main-color;
+				.f-bold{
+					font-size: 4.2rem;
+				}
+				.f-color{
+					color: @main-color-text;
+					font-size: 4.2rem;
+				}
+				p{
+					color: @lite-color-text;
+				}
+			}
+			.market{
+				margin-top: 20px;
+			}
+		}
+		.home-phone{
+			width: 55%;
+			img{
+				width: 70%;
+			}
+		}
+	}
+}
