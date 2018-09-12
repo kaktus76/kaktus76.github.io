@@ -9,6 +9,7 @@
 @main-color-text: #444444;
 @lite-color-text: #777777;
 @hover-color: #59f7df;
+@border-icon-color: #e6e6e6;
 
 @gradient-color: linear-gradient(to bottom, #42ffd0 0%, #42ffd0 8%, #37d2ed 75%, #37d2ed 100%);
 
@@ -62,17 +63,19 @@ ul{
 
 
 
+
 // Start Header Style
 
 .fixed-nav{
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
+// Header Style
 .header{
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	background-image: url(../images/head-bg.png);
+	background-image: url(../images/section-bg/head-bg.png);
 	background-position: center;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -85,22 +88,22 @@ ul{
 		width: 100%;
 		height: auto;
 		.circle3{
-			position: absolute;
+	position: absolute;
 			top: 185px;
 			left: 75px;
-			animation: circle 3s infinite linear;
+			animation: circle 3s linear infinite;
 		}
 		.circle2{
 			position: absolute;
 			top: 120px;
 			right: 80px;
-			animation: circle 2.8s infinite linear;
+			animation: circle 2.7s linear infinite;
 		}
 		.circle1{
 			position: absolute;
 			top: 230px;
 			right: 100px;
-			animation: circle 3.2s infinite linear;
+			animation: circle 3.2s linear infinite;
 		}
 	}
 
@@ -190,3 +193,133 @@ ul{
 		}
 	}
 }
+// End Header Style
+
+// Main 
+.main{
+	width: 100%;
+	height: auto;
+	.about{
+		position: relative;
+		width: 100%;
+		min-height: 500px;
+		height: auto;
+		background-image: url(../images/section-bg/about-bg.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		.about-decor{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			.about-circle1{
+				position: absolute;
+				right: 100px;
+				bottom: 100px;
+				animation: circle 3s infinite linear;
+			}
+			.about-circle2{
+				position: absolute;
+				right: 50px;
+				bottom: 50px;
+				animation: circle 2.5s infinite linear;
+			}
+		}
+		.row{
+			display: flex;
+			justify-content: center;
+			.about-contain{
+				width: 45%;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				.title{
+					font-size: @h2Size;
+					font-weight: 300;
+					letter-spacing: 4px;
+					span{
+						font-size: @h2Size;
+						font-weight: 700;
+					}
+				}
+				.caption-about{
+					color: @lite-color-text;
+					letter-spacing: 0.07rem;
+					line-height: 1.8rem;
+				}
+				.about-opp{
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					.about-hover{
+						display: flex;
+						align-items: center;
+						width: 50%;
+						height: 50px;
+						margin-top: 20px;
+						&:hover .about-icon{
+							background-color: @main-color;
+						}
+						&:hover .about-icon i{
+							color: white;
+						}
+						.about-icon{
+							width: 45px;
+							height: 45px;
+							border: 1px solid @border-icon-color;
+							border-radius: 50%;
+							text-align: center;
+							transition: .3s ease;
+							i{
+								line-height: 2;
+								color: @lite-color-text;
+								font-size: 1.4rem;
+							}
+						}
+						.about-text{
+							padding-left: 15px;
+							h3{
+								letter-spacing: 1px;
+								font-weight: 600;
+								color: @main-color-text;
+								text-transform: capitalize;
+								font-size: 1.03rem;
+							}
+						}
+					}
+				}
+				.button{
+						width: 100%;
+						margin-top: 30px;
+						.btn{
+							cursor: pointer;
+							font-weight: 400;
+							text-align: center;
+							line-height: 1.5;
+							
+						}
+						.btn-custom{
+							font-size: 0.93rem;
+							padding: 10px 25px;
+							border: none;
+							color: white;
+							border-radius: 50px;
+							background-image: linear-gradient(to right, #19d3dc, #18e7d3, #18e7d3, #19d2dd);
+							background-size: 300% 100%;
+								transition: .4s ease-in-out;
+							&:hover{
+								background-position: 100% 0;
+								transition: .4s ease-in-out;
+							}
+						}
+					}
+			}
+			.about-right{
+				width: 55%;
+			}
+		}
+	}
+}
+
+
+// End Main
