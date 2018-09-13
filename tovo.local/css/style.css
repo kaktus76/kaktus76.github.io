@@ -47,7 +47,7 @@ ul {
   height: 100vh;
   background-image: url(../images/section-bg/head-bg.png);
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
 }
@@ -149,39 +149,36 @@ ul {
 }
 .header .home .home-phone {
   width: 55%;
+  text-align: center;
 }
 .header .home .home-phone img {
-  width: 70%;
+  width: 75%;
 }
 .main {
   width: 100%;
   height: auto;
 }
 .main .about {
+  padding: 100px 0;
   position: relative;
   width: 100%;
-  min-height: 500px;
   height: auto;
   background-image: url(../images/section-bg/about-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.main .about .about-decor {
+.main .about .about-circle1 {
   position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.main .about .about-decor .about-circle1 {
-  position: absolute;
-  right: 100px;
-  bottom: 100px;
+  z-index: 10;
+  right: 130px;
+  bottom: 160px;
   animation: circle 3s infinite linear;
 }
-.main .about .about-decor .about-circle2 {
+.main .about .about-circle2 {
   position: absolute;
-  right: 50px;
-  bottom: 50px;
-  animation: circle 2.5s infinite linear;
+  right: 0;
+  bottom: 0;
+  animation: circle 3.5s infinite linear;
 }
 .main .about .row {
   display: flex;
@@ -274,6 +271,22 @@ ul {
   transition: 0.4s ease-in-out;
 }
 .main .about .row .about-right {
+  position: relative;
+  z-index: 11;
   width: 55%;
+  height: 600px;
+}
+.main .about .row .about-right .about-phone {
+  background: linear-gradient(to bottom, #42ffd0 0%, #42ffd0 8%, #37d2ed 75%, #37d2ed 100%);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .about .row .about-right .about-phone img {
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=./style.css.map */

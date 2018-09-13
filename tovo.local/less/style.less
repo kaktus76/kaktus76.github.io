@@ -77,12 +77,12 @@ ul{
 	height: 100vh;
 	background-image: url(../images/section-bg/head-bg.png);
 	background-position: center;
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	overflow: hidden;
 	// background: #dbd6d6;
 
-		
+	// Home Decor 
 	.home-decor{
 		position: absolute;
 		width: 100%;
@@ -106,7 +106,7 @@ ul{
 			animation: circle 3.2s linear infinite;
 		}
 	}
-
+	// End Home Decor
 
 
 	// Style navbar
@@ -187,8 +187,9 @@ ul{
 		}
 		.home-phone{
 			width: 55%;
+			text-align: center;
 			img{
-				width: 70%;
+				width: 75%;
 			}
 		}
 	}
@@ -200,29 +201,25 @@ ul{
 	width: 100%;
 	height: auto;
 	.about{
+		padding: 100px 0;
 		position: relative;
 		width: 100%;
-		min-height: 500px;
 		height: auto;
 		background-image: url(../images/section-bg/about-bg.png);
 		background-repeat: no-repeat;
 		background-size: cover;
-		.about-decor{
+		.about-circle1{
 			position: absolute;
-			width: 100%;
-			height: 100%;
-			.about-circle1{
-				position: absolute;
-				right: 100px;
-				bottom: 100px;
-				animation: circle 3s infinite linear;
-			}
-			.about-circle2{
-				position: absolute;
-				right: 50px;
-				bottom: 50px;
-				animation: circle 2.5s infinite linear;
-			}
+			z-index: 10;
+			right: 130px;
+			bottom: 160px;
+			animation: circle 3s infinite linear;
+		}
+		.about-circle2{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			animation: circle 3.5s infinite linear;
 		}
 		.row{
 			display: flex;
@@ -315,7 +312,23 @@ ul{
 					}
 			}
 			.about-right{
+				position: relative;
+				z-index: 11;
 				width: 55%;
+				height: 600px;
+				.about-phone{
+					background: @gradient-color;
+					border-radius: 50%;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
 			}
 		}
 	}
