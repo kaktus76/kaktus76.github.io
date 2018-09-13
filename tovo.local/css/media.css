@@ -1,1 +1,121 @@
+@media (max-width: 1366px) {
+  .header .home .title {
+    margin-top: 70px;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  @keyframes circle {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(25px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .header {
+    overflow: hidden;
+  }
+  .header .home-decor .circle3 {
+    position: absolute;
+    top: 70px;
+    left: 75px;
+    animation: circle 3s linear infinite;
+  }
+  .header .home-decor .circle2 {
+    position: absolute;
+    top: 120px;
+    right: 10px;
+    animation: circle 2.7s linear infinite;
+  }
+  .header .home-decor .circle1 {
+    position: absolute;
+    top: 230px;
+    right: 40px;
+    animation: circle 3.2s linear infinite;
+  }
+  .header .home .title {
+    margin-top: 0;
+  }
+  .header .home .title .title-text {
+    font-size: 1rem;
+  }
+  .header .home .title h1 {
+    font-size: 3.5rem;
+  }
+  .header .home .title h1 .f-bold,
+  .header .home .title h1 .f-color {
+    font-size: 3.5rem;
+  }
+  .header .home .home-phone {
+    position: relative;
+    right: 0;
+    top: -30px;
+  }
+  .header .home .home-phone img {
+    width: 65%;
+  }
+  .main {
+    overflow-x: hidden;
+  }
+  .main .about {
+    padding: 80px 0;
+    background-position: 60% 0;
+  }
+  .main .about .about-contain .title {
+    font-size: 1.3rem;
+  }
+  .main .about .about-contain .title span {
+    font-size: 1.3rem;
+  }
+  .main .about .about-circle1 {
+    right: 10px;
+  }
+  .main .about .about-circle {
+    right: 10px;
+  }
+  .main .about .row .about-right {
+    height: 500px;
+  }
+}
+@media (max-width: 1024px) {
+  .main {
+    overflow-x: hidden;
+  }
+  .main .about .about-circle1 {
+    right: 10px;
+    top: 10px;
+  }
+  .main .about .about-circle2 {
+    right: -150px;
+  }
+}
+@media (max-width: 990px) {
+  .container {
+    max-width: 720px;
+  }
+  .header .home-decor .circle3 {
+    top: 540px;
+    left: 75px;
+    animation: none;
+  }
+  .header .home-decor .circle2 {
+    top: 320px;
+    right: 0;
+    animation: none;
+  }
+  .header .home-decor .circle1 {
+    top: 130px;
+    right: 20px;
+    animation: none;
+  }
+  .header .home .home-phone img {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=./media.css.map */

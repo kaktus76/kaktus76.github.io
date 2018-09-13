@@ -1,2 +1,166 @@
 // out: ../css/media.css, sourceMap: trye
 
+// ПЕРЕМЕННЫЕ
+
+@main-color: #18e7d3;
+@main-color-text: #444444;
+@lite-color-text: #777777;
+@hover-color: #59f7df;
+@border-icon-color: #e6e6e6;
+
+@gradient-color: linear-gradient(to bottom, #42ffd0 0%, #42ffd0 8%, #37d2ed 75%, #37d2ed 100%);
+
+@h2Size: 2rem;
+
+@media (max-width: 1366px) {
+  .header{
+    .home{
+      .title{
+        margin-top: 70px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .container{
+    max-width: 960px;
+  }
+
+  @keyframes circle {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(25px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+
+  .header{
+    overflow: hidden;
+    .home-decor{
+      .circle3{
+        position: absolute;
+        top: 70px;
+        left: 75px;
+        animation: circle 3s linear infinite;
+      }
+      .circle2{
+        position: absolute;
+        top: 120px;
+        right: 10px;
+        animation: circle 2.7s linear infinite;
+      }
+      .circle1{
+        position: absolute;
+        top: 230px;
+        right: 40px;
+        animation: circle 3.2s linear infinite;
+      }
+    }
+      .home{
+        .title{
+          margin-top: 0;
+          .title-text{
+            font-size: 1rem;
+          }
+          h1{
+            font-size: 3.5rem;
+            .f-bold,
+            .f-color{
+              font-size: 3.5rem;
+            }
+          }
+        }
+        .home-phone{
+          position: relative;
+          right: 0;
+          top: -30px;
+          img{
+            width: 65%;
+
+          }
+        }
+      }
+
+}
+
+  .main{
+    overflow-x: hidden;
+    .about{
+      padding: 80px 0;
+      background-position: 60% 0;
+      .about-contain{
+        .title{
+          font-size: 1.3rem;
+          span{
+            font-size: 1.3rem;
+          }
+        }
+      }
+      .about-circle1{
+        right: 10px;
+      }
+      .about-circle{
+        right: 10px;
+      }
+      .row{
+        .about-right{
+          height: 500px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main{
+    overflow-x: hidden;
+    .about{
+      .about-circle1{
+        right: 10px;
+        top: 10px;
+      }
+      .about-circle2{
+        right: -150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .container{
+    max-width: 720px;
+  }
+  .header{
+    .home-decor{
+      .circle3{
+        top: 540px;
+        left: 75px;
+        animation: none;
+      }
+      .circle2{
+        top: 320px;
+        right: 0;
+        animation: none;
+      }
+      .circle1{
+        top: 130px;
+        right: 20px;
+        animation: none;
+      }
+    }
+    .home{
+      .home-phone{
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
