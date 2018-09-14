@@ -222,7 +222,11 @@
   .header .home .home-phone {
     display: none;
   }
+  .main .about .about-circle2 {
+    z-index: 1;
+  }
   .main .about .row .about-contain {
+    z-index: 100;
     width: 100%;
     justify-content: center;
     align-items: center;
