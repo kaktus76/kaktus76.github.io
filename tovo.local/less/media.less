@@ -140,7 +140,7 @@
   .header{
     .home-decor{
       .circle3{
-        top: 540px;
+        top: 340px;
         left: 75px;
         animation: none;
       }
@@ -155,10 +155,138 @@
         animation: none;
       }
     }
+
+    .navbar{
+      flex-wrap: wrap;
+      height: 50px;
+      .logo{
+        width: 50%;
+      }
+      .navbar-toggle{
+        position: relative;
+        z-index: 999;
+        padding: 0.25rem 0.75rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.5);
+        border-color: rgba(0, 0, 0, 0.1);
+        .navbar-toggle-icon{
+          width: 2.1rem;
+          height: 1.9rem;
+          background-image: url(../images/menu-burger.svg);
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+
+        }
+        &:hover ~ .navbar-box{
+          transform: scale(1);
+        }
+      }
+      .navbar-box{
+        width: 100%;
+        position: relative;
+        z-index: 999;
+        background: #fff;
+        transform-origin: right top;
+        transform: scale(0);
+        transition: .5s;
+        .navbar-nav{
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          .nav-item{
+            padding: 9px 0;
+            }
+        }
+      }
+    }
+
     .home{
+      .title{
+        padding: 0 15px;
+        h1{
+          font-size: 2.8rem;
+          .f-bold,
+          .f-color{
+            font-size: 2.8rem;
+          }
+        }
+        p{
+          font-size: 0.86rem;
+        }
+        .market{
+          a{
+            margin-right: 20px;
+          }
+        }
+      }
       .home-phone{
         img{
           width: 100%;
+        }
+      }
+    }
+  }
+  .main{
+    .about{
+      .about-circle1,
+      .about-circle2{
+        animation: none;
+      }
+      .row{
+        .about-contain{
+          .title{
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            span{
+              font-size: 1.3rem;
+            }
+          }
+          .caption-about{
+            font-size: 0.86rem;
+            line-height: 1.3rem;
+          }
+        }
+        .about-right{
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container{
+    width: 100%;
+    max-width: 540px;
+  }
+  .header{
+    .home{
+      .title{
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      .home-phone{
+        display: none;
+      }
+    }
+  }
+  .main{
+    .about{
+      .row{
+        .about-contain{
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+        }
+        .about-right{
+          display: none;
         }
       }
     }

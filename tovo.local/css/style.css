@@ -85,6 +85,9 @@ ul {
   display: block;
   width: auto;
 }
+.header .navbar .navbar-toggle {
+  display: block;
+}
 .header .navbar .navbar-box {
   width: 80%;
 }
