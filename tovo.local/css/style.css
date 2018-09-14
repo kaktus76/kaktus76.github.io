@@ -292,4 +292,51 @@ ul {
   width: 100%;
   height: auto;
 }
+.main .features {
+  background: url(../images/section-bg/feature-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 850px;
+  position: relative;
+}
+.main .features .features-circle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  animation: circle 3s infinite linear;
+}
+.main .features .row {
+  display: flex;
+  justify-content: center;
+}
+.main .features .row .feature-img {
+  width: 30%;
+}
+.main .features .row .feature-img img {
+  width: 80%;
+}
+.main .features .row .features-info {
+  width: 70%;
+}
+.main .features .row .features-info h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+}
+.main .features .row .features-info h2 span {
+  font-size: 2rem;
+}
+.main .features .row .features-info .box {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .features .row .features-info .box .info-box {
+  width: 50%;
+  margin-bottom: 20px;
+}
+.main .features .row .features-info .box .info-box .feature-name {
+  width: 100%;
+  display: flex;
+}
 /*# sourceMappingURL=./style.css.map */

@@ -203,6 +203,7 @@ ul{
 .main{
 	width: 100%;
 	height: auto;
+	// About Style
 	.about{
 		padding: 100px 0;
 		position: relative;
@@ -335,6 +336,57 @@ ul{
 			}
 		}
 	}
+	// End About Style
+
+	// Features Style
+	.features{
+		background: url(../images/section-bg/feature-bg.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		min-height: 850px;
+		position: relative;
+		.features-circle{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			animation: circle 3s infinite linear;
+		}
+		.row{
+			display: flex;
+			justify-content: center;
+			.feature-img{
+				width: 30%;
+				img{
+					width: 80%;
+				}
+			}
+			.features-info{
+				width: 70%;
+				h2{
+					font-size: @h2Size;
+					font-weight: 300;
+					letter-spacing: 0.2rem;
+					span{
+						font-size: @h2Size;
+					}
+				}
+				.box{
+					margin-top: 30px;
+					display: flex;
+					flex-wrap: wrap;
+					.info-box{
+						width: 50%;
+						margin-bottom: 20px;
+						.feature-name{
+							width: 100%;
+							display: flex;
+						}
+					}
+				}
+			}
+		}
+	}
+	// End Features Style
 }
 
 
