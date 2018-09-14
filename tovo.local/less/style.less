@@ -343,25 +343,31 @@ ul{
 		background: url(../images/section-bg/feature-bg.png);
 		background-size: cover;
 		background-repeat: no-repeat;
+		background-position: 0;
 		min-height: 850px;
 		position: relative;
+		padding-top: 100px;
 		.features-circle{
 			position: absolute;
-			right: 0;
-			bottom: 0;
+			z-index: 1;
+			right: 100px;
+			bottom: 150px;
 			animation: circle 3s infinite linear;
 		}
 		.row{
 			display: flex;
 			justify-content: center;
 			.feature-img{
-				width: 30%;
+				width: 40%;
 				img{
-					width: 80%;
+					width: 90%;
 				}
 			}
 			.features-info{
-				width: 70%;
+				position: relative;
+				z-index: 10;
+				width: 60%;
+				padding-top: 50px;
 				h2{
 					font-size: @h2Size;
 					font-weight: 300;
@@ -376,11 +382,26 @@ ul{
 					flex-wrap: wrap;
 					.info-box{
 						width: 50%;
-						margin-bottom: 20px;
+						margin-bottom: 50px;
 						.feature-name{
 							width: 100%;
 							display: flex;
+							line-height: 2;
+							i{
+								color: @main-color;
+								font-size: 1.4rem;
+							}
+							h4{
+								padding-left: 15px;
+								line-height: 1.5rem;
+								font-weight: 600;
+								font-size: 1.06rem;
+							}
 						}
+							p{
+								margin-top: 15px;
+								color: @lite-color-text;
+							}
 					}
 				}
 			}

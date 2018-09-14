@@ -256,6 +256,19 @@
         }
       }
     }
+    .features{
+      .features-circle{
+        animation: none;
+      }
+      .row{
+        .feature-img{
+          display: none;
+        }
+        .features-info{
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
@@ -287,6 +300,31 @@
         }
         .about-right{
           display: none;
+        }
+      }
+    }
+    .features{
+      background-position: 45% 0;
+      padding-top: 50px;
+      min-height: 700px;
+      .row{
+        .features-info{
+          h2{
+            font-size: @h2Size - 0.5rem;
+            span{
+              font-size: @h2Size - 0.5rem;
+            }
+          }
+          p{
+            font-size: 0.86rem;
+          }
+          .box{
+            flex-direction: column;
+            .info-box{
+              margin-top: -20px;
+              width: 100%;
+            }
+          }
         }
       }
     }

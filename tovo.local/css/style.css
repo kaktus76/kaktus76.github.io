@@ -296,13 +296,16 @@ ul {
   background: url(../images/section-bg/feature-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0;
   min-height: 850px;
   position: relative;
+  padding-top: 100px;
 }
 .main .features .features-circle {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  z-index: 1;
+  right: 100px;
+  bottom: 150px;
   animation: circle 3s infinite linear;
 }
 .main .features .row {
@@ -310,13 +313,16 @@ ul {
   justify-content: center;
 }
 .main .features .row .feature-img {
-  width: 30%;
+  width: 40%;
 }
 .main .features .row .feature-img img {
-  width: 80%;
+  width: 90%;
 }
 .main .features .row .features-info {
-  width: 70%;
+  position: relative;
+  z-index: 10;
+  width: 60%;
+  padding-top: 50px;
 }
 .main .features .row .features-info h2 {
   font-size: 2rem;
@@ -333,10 +339,25 @@ ul {
 }
 .main .features .row .features-info .box .info-box {
   width: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 .main .features .row .features-info .box .info-box .feature-name {
   width: 100%;
   display: flex;
+  line-height: 2;
+}
+.main .features .row .features-info .box .info-box .feature-name i {
+  color: #18e7d3;
+  font-size: 1.4rem;
+}
+.main .features .row .features-info .box .info-box .feature-name h4 {
+  padding-left: 15px;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-size: 1.06rem;
+}
+.main .features .row .features-info .box .info-box p {
+  margin-top: 15px;
+  color: #777777;
 }
 /*# sourceMappingURL=./style.css.map */
