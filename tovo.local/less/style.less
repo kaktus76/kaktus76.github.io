@@ -12,6 +12,8 @@
 @border-icon-color: #e6e6e6;
 
 @gradient-color: linear-gradient(to bottom, #42ffd0 0%, #42ffd0 8%, #37d2ed 75%, #37d2ed 100%);
+@btn-gradient: linear-gradient(to right, #19d3dc, #18e7d3, #18e7d3, #19d2dd);
+
 
 @h2Size: 2rem;
 
@@ -639,6 +641,120 @@ ul{
 		}
 	}
 	// End Blog
+	// Start Price
+	.price{
+		position: relative;
+		width: 100%;
+		background-image: url(../images/section-bg/price.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding: 100px;
+		text-align: center;
+		.price-carousel{
+			width: 100%;
+			z-index: 99;
+			.owl-stage-outer{
+				position: relative;
+				overflow: hidden;
+				.owl-stage{
+					position: relative;
+					width: 3420px;
+					display: flex;
+					.owl-item{
+						width: 350px;
+						margin-right: 30px;
+						.price-item{
+							margin: 3px;
+							.price-block{
+								background: white;
+								padding: 20px;
+								box-shadow: 0 5px 27px 0 rgba(0, 0, 0, 0.05);
+								transition: .3s ease;
+								&:hover .price-package h2{
+									color: @main-color;
+								}
+								.price-type{
+									width: 100%;
+									background-image: url(../images/section-bg/price-bg.png);
+									background-size: cover;
+									padding: 20px;
+									h2{
+										padding: 5px;
+										background: white;
+										font-size: 1.6rem;
+										color: @main-color;
+									}
+								}
+								.price-package{
+									h6{
+										font-size: 0.8rem;
+										text-transform: uppercase;
+										letter-spacing: 0.1rem;
+									}
+									.user-type{
+										margin: 25px 0;
+										line-height: 1;
+										font-weight: 400;
+									}
+									.divide{
+										height: 1px;
+										background: #eee;
+										width: 245px;
+										margin: 0 auto;
+									}
+									h2{
+										font-size: 2.4rem;
+										font-weight: bold;
+										margin-top: 30px;
+										color: #333;
+										line-height: 1;
+										transition: .3s ease;
+									}
+									.price-year{
+										margin: 5px;
+										margin-bottom: 30px;
+										font-weight: 700;
+										line-height: 1;
+									}
+								}
+								.feature{
+									margin: 25px auto;
+									padding: 0;
+									li{
+										text-transform: capitalize;
+										color: @lite-color-text;
+										padding: 10px;
+									}
+								}
+								.btn{
+									cursor: pointer;
+									width: 100%;
+									color: @main-color;
+									padding: 15px 25px;
+									font-weight: 700;
+									letter-spacing: 2px;
+									display: inline-block;
+								}
+								.btn-custom{
+									background: @btn-gradient;
+									color: white;
+									text-transform: uppercase;
+									border-radius: 50px;
+									background-size: 300% 100%;
+									transition: .4s ease-in-out;
+									&:hover{
+										background-position: 100% 0;
+										transition: all .4s ease-in-out;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	// End Price
 }
 
 

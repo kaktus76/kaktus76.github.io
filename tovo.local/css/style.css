@@ -572,4 +572,114 @@ ul {
   margin-top: -10px;
   color: #777777;
 }
+.main .price {
+  position: relative;
+  width: 100%;
+  background-image: url(../images/section-bg/price.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px;
+  text-align: center;
+}
+.main .price .price-carousel {
+  width: 100%;
+  z-index: 99;
+}
+.main .price .price-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage {
+  position: relative;
+  width: 3420px;
+  display: flex;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item {
+  width: 350px;
+  margin-right: 30px;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item {
+  margin: 3px;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 5px 27px 0 rgba(0, 0, 0, 0.05);
+  transition: .3s ease;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block:hover .price-package h2 {
+  color: #18e7d3;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .price-type {
+  width: 100%;
+  background-image: url(../images/section-bg/price-bg.png);
+  background-size: cover;
+  padding: 20px;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .price-type h2 {
+  padding: 5px;
+  background: white;
+  font-size: 1.6rem;
+  color: #18e7d3;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .price-package h6 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .price-package .user-type {
+  margin: 25px 0;
+  line-height: 1;
+  font-weight: 400;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .price-package .divide {
+  height: 1px;
+  background: #eee;
+  width: 245px;
+  margin: 0 auto;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .price-package h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-top: 30px;
+  color: #333;
+  line-height: 1;
+  transition: .3s ease;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .price-package .price-year {
+  margin: 5px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  line-height: 1;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .feature {
+  margin: 25px auto;
+  padding: 0;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .feature li {
+  text-transform: capitalize;
+  color: #777777;
+  padding: 10px;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .btn {
+  cursor: pointer;
+  width: 100%;
+  color: #18e7d3;
+  padding: 15px 25px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .btn-custom {
+  background: linear-gradient(to right, #19d3dc, #18e7d3, #18e7d3, #19d2dd);
+  color: white;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background-size: 300% 100%;
+  transition: 0.4s ease-in-out;
+}
+.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .btn-custom:hover {
+  background-position: 100% 0;
+  transition: all 0.4s ease-in-out;
+}
 /*# sourceMappingURL=./style.css.map */
