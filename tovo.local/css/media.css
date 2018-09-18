@@ -113,6 +113,15 @@
   .main .screenshot .screenshot-box .screenshot-carousel .owl-stage-outer .owl-stage .owl-item img {
     width: 100%;
   }
+  .main .blog .blog-carousel .sls-stage-outer .sl-stage .sl-item {
+    width: 450px;
+  }
+  .main .blog .blog-carousel .sls-stage-outer .sl-stage .sl-item .box-img {
+    padding: 5px;
+  }
+  .main .blog .blog-carousel .sls-stage-outer .sl-stage .sl-item .box-text h5 {
+    font-size: 0.83rem;
+  }
 }
 @media (max-width: 1024px) {
   .main {
@@ -273,6 +282,14 @@
     left: 0;
     bottom: 20px;
   }
+  .main .blog .blog-carousel .sl-dots {
+    top: auto;
+    bottom: -50px;
+    right: 45%;
+  }
+  .main .blog .blog-carousel .sls-stage-outer .sl-stage .sl-item {
+    width: 330px;
+  }
 }
 @media (max-width: 768px) {
   .container {
@@ -339,6 +356,12 @@
   }
   .main .screenshot .screenshot-box .screenshot-carousel .owl-stage-outer .owl-stage .owl-item img {
     width: 100%;
+  }
+  .main .blog .blog-carousel .sl-dots {
+    right: 40%;
+  }
+  .main .blog .blog-carousel .sls-stage-outer .sl-stage .sl-item {
+    width: 510px;
   }
 }
 @media (max-width: 576px) {
