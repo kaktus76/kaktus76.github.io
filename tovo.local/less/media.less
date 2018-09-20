@@ -170,6 +170,17 @@
         }
       }
     }
+    .price{
+      .price-carousel{
+        .owl-stage-outer{
+          .owl-stage{
+            .owl-item{
+              width: 290px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -206,7 +217,7 @@
           .owl-stage-outer{
             .owl-stage{
               position: absolute;
-              left: -240px;
+              left: -120px;
               .owl-item{
 
                 width: 210px;
@@ -214,6 +225,17 @@
                   width: 100%;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+    .price{
+      .price-carousel{
+        .owl-stage-outer{
+          .owl-stage{
+            .owl-item{
+              width: 290px;
             }
           }
         }
@@ -380,7 +402,64 @@
           }
         }
       }
-    } 
+    }
+    .price{
+      background-position: top;
+      background-size: contain;
+      .price-carousel{
+        .owl-stage-outer{
+          .owl-stage{
+            .owl-item{
+              width: 330px;
+              .price-item{
+                .price-block{
+                  .feature{
+                    li{
+                      padding: 5px;
+                    }
+                  }
+                  .btn{
+                    width: 50%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .contact{
+      padding: 50px 0;
+      .contact-circle1{
+        animation: none;
+        bottom: -100px;
+      }
+      .contact-circle2{
+        bottom: 100px;
+        animation: none;
+      }
+      .row{
+        .cont-form{
+          width: 100%;
+        }
+        .cont-img{
+          display: none;
+        }
+      }
+    }
+    .sub{
+      h2{
+        font-size: @h2Size - 0.5rem;
+        letter-spacing: 0.2rem;
+        span{
+          font-size: @h2Size - 0.5rem;
+          letter-spacing: 0.2rem;
+        }
+      }
+      p{
+        font-size: 0.93rem;
+      }
+    }
   }
 }
 
@@ -483,6 +562,40 @@
         }
       }
     } 
+    .price{
+      background-position: top;
+      background-size: contain;
+      .price-carousel{
+        .owl-stage-outer{
+          .owl-stage{
+            .owl-item{
+              width: 510px;
+              .price-item{
+                .price-block{
+                  .feature{
+                    li{
+                      padding: 5px;
+                    }
+                  }
+                  .btn{
+                    width: 50%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .contact{
+      .row{
+        .cont-form{
+          input{
+            width: 100% !important;
+          }
+        }
+      }
+    }
   }
 }
 @media (max-width: 576px) {
@@ -521,5 +634,6 @@
         }
       }
     }
+    
   }
 }

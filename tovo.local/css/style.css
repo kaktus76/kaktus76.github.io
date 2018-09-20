@@ -71,6 +71,31 @@ ul {
   padding-left: 15px;
   padding-right: 15px;
 }
+.btn {
+  cursor: pointer;
+  color: #18e7d3;
+  padding: 15px 25px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+.btn-custom {
+  background: linear-gradient(to right, #19d3dc, #18e7d3, #18e7d3, #19d2dd);
+  color: white;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background-size: 300% 100%;
+  transition: 0.4s ease-in-out;
+}
+.btn-custom:hover {
+  background-position: 100% 0;
+  transition: all 0.4s ease-in-out;
+}
+h2 {
+  letter-spacing: 0.33rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
 .f-bold {
   font-weight: 700;
   font-size: 2rem;
@@ -231,11 +256,6 @@ ul {
   justify-content: center;
   flex-direction: column;
 }
-.main .about .row .about-contain .title {
-  font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: 4px;
-}
 .main .about .row .about-contain .title span {
   font-size: 2rem;
   font-weight: 700;
@@ -362,11 +382,6 @@ ul {
   width: 60%;
   padding-top: 50px;
 }
-.main .features .row .features-info h2 {
-  font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: 0.2rem;
-}
 .main .features .row .features-info h2 span {
   font-size: 2rem;
 }
@@ -480,10 +495,6 @@ ul {
   width: 100%;
   height: 100%;
 }
-.main .blog .box-blog h2 {
-  font-size: 2rem;
-  font-weight: 300;
-}
 .main .blog .blog-carousel {
   position: relative;
   width: 100%;
@@ -578,7 +589,7 @@ ul {
   background-image: url(../images/section-bg/price.png);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 100px;
+  padding: 100px 0;
   text-align: center;
 }
 .main .price .price-carousel {
@@ -662,24 +673,143 @@ ul {
   padding: 10px;
 }
 .main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .btn {
-  cursor: pointer;
   width: 100%;
+}
+.main .contact {
+  position: relative;
+  width: 100%;
+  padding: 100px 0;
+  background-image: url(../images/section-bg/Contact.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.main .contact .contact-circle1 {
+  position: absolute;
+  left: 150px;
+  bottom: -20px;
+  animation: circle-right 3s infinite linear;
+}
+.main .contact .contact-circle2 {
+  position: absolute;
+  left: 250px;
+  bottom: 150px;
+  animation: circle-right 2.6s infinite linear;
+}
+.main .contact .row {
+  display: flex;
+  align-items: center;
+}
+.main .contact .row .cont-form {
+  width: 70%;
+  height: 100%;
+}
+.main .contact .row .cont-form form {
+  position: relative;
+  height: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main .contact .row .cont-form form input,
+.main .contact .row .cont-form form textarea {
+  margin-bottom: 20px;
+  width: 48%;
+  font-size: 0.8rem;
+  padding: 12px 30px;
+  border-radius: 20px;
+  color: #777777;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 5px 0 rgba(170, 170, 170, 0.15);
+}
+.main .contact .row .cont-form form input::placeholder,
+.main .contact .row .cont-form form textarea::placeholder {
+  color: #777777;
+}
+.main .contact .row .cont-form form input:nth-child(3),
+.main .contact .row .cont-form form textarea:nth-child(3) {
+  width: 100%;
+}
+.main .contact .row .cont-form form textarea {
+  width: 100%;
+}
+.main .contact .row .cont-form form .btn {
+  font-size: 0.93rem;
+  padding: 10px 25px;
+  outline: none;
+  border: none;
+  width: 120px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.main .contact .row .cont-form form .btn-custom {
+  font-weight: 300;
+}
+.main .contact .row .cont-img {
+  width: 30%;
+}
+.main .contact .row .cont-img img {
+  width: 70%;
+  margin-left: 50px;
+}
+.main .sub {
+  width: 100%;
+  position: relative;
+  padding: 100px 0;
+}
+.main .sub .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main .sub .row i {
+  font-size: 4rem;
   color: #18e7d3;
-  padding: 15px 25px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  display: inline-block;
+  margin-bottom: 10px;
 }
-.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .btn-custom {
-  background: linear-gradient(to right, #19d3dc, #18e7d3, #18e7d3, #19d2dd);
-  color: white;
-  text-transform: uppercase;
+.main .sub .row h2 {
+  margin-bottom: 10px;
+}
+.main .sub .row p {
+  text-align: center;
+  color: #777777;
+  line-height: 1.8em;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.main .sub .row .footer-form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .sub .row .footer-form input {
+  width: 100%;
+  margin-bottom: 20px;
   border-radius: 50px;
-  background-size: 300% 100%;
-  transition: 0.4s ease-in-out;
+  padding: 20px 0;
+  border: 2px solid #eeeeee;
+  font-size: 0.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+  transition: box-shadow 0.15s ease-in-out;
 }
-.main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .btn-custom:hover {
-  background-position: 100% 0;
-  transition: all 0.4s ease-in-out;
+.main .sub .row .footer-form input:focus {
+  box-shadow: 0 0 2px 4px rgba(139, 185, 253, 0.521);
+}
+.main .sub .row .footer-form .btn {
+  border: none;
+  padding: 10px 25px;
+  font-size: 0.93rem;
+  outline: none;
+  width: 120px;
+}
+.main .sub .row .footer-form .btn-custom {
+  font-weight: 300;
 }
 /*# sourceMappingURL=./style.css.map */

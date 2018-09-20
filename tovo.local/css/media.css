@@ -122,6 +122,9 @@
   .main .blog .blog-carousel .sls-stage-outer .sl-stage .sl-item .box-text h5 {
     font-size: 0.83rem;
   }
+  .main .price .price-carousel .owl-stage-outer .owl-stage .owl-item {
+    width: 290px;
+  }
 }
 @media (max-width: 1024px) {
   .main {
@@ -154,13 +157,16 @@
   }
   .main .screenshot .screenshot-box .screenshot-carousel .owl-stage-outer .owl-stage {
     position: absolute;
-    left: -240px;
+    left: -120px;
   }
   .main .screenshot .screenshot-box .screenshot-carousel .owl-stage-outer .owl-stage .owl-item {
     width: 210px;
   }
   .main .screenshot .screenshot-box .screenshot-carousel .owl-stage-outer .owl-stage .owl-item img {
     width: 100%;
+  }
+  .main .price .price-carousel .owl-stage-outer .owl-stage .owl-item {
+    width: 290px;
   }
 }
 @media (max-width: 990px) {
@@ -290,6 +296,47 @@
   .main .blog .blog-carousel .sls-stage-outer .sl-stage .sl-item {
     width: 330px;
   }
+  .main .price {
+    background-position: top;
+    background-size: contain;
+  }
+  .main .price .price-carousel .owl-stage-outer .owl-stage .owl-item {
+    width: 330px;
+  }
+  .main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .feature li {
+    padding: 5px;
+  }
+  .main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .btn {
+    width: 50%;
+  }
+  .main .contact {
+    padding: 50px 0;
+  }
+  .main .contact .contact-circle1 {
+    animation: none;
+    bottom: -100px;
+  }
+  .main .contact .contact-circle2 {
+    bottom: 100px;
+    animation: none;
+  }
+  .main .contact .row .cont-form {
+    width: 100%;
+  }
+  .main .contact .row .cont-img {
+    display: none;
+  }
+  .main .sub h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
+  .main .sub h2 span {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
+  .main .sub p {
+    font-size: 0.93rem;
+  }
 }
 @media (max-width: 768px) {
   .container {
@@ -362,6 +409,22 @@
   }
   .main .blog .blog-carousel .sls-stage-outer .sl-stage .sl-item {
     width: 510px;
+  }
+  .main .price {
+    background-position: top;
+    background-size: contain;
+  }
+  .main .price .price-carousel .owl-stage-outer .owl-stage .owl-item {
+    width: 510px;
+  }
+  .main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .feature li {
+    padding: 5px;
+  }
+  .main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .btn {
+    width: 50%;
+  }
+  .main .contact .row .cont-form input {
+    width: 100% !important;
   }
 }
 @media (max-width: 576px) {
