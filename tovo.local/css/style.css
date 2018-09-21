@@ -815,7 +815,6 @@ h2 {
 .main .map {
   width: 100%;
   position: relative;
-  background: linear-gradient(to bottom, #42ffd0 0%, #42ffd0 8%, #37d2ed 75%, #37d2ed 100%);
   overflow: hidden;
 }
 .main .map .row {
@@ -824,6 +823,7 @@ h2 {
   padding: 0;
 }
 .main .map .row .addres-bar {
+  background: linear-gradient(to bottom, #42ffd0 0%, #42ffd0 8%, #37d2ed 75%, #37d2ed 100%);
   width: 50%;
   padding: 50px 0;
   display: flex;
