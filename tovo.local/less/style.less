@@ -836,6 +836,7 @@ h2{
 		}
 	}
 	// End Contact
+	// Start Subckribe
 	.sub{
 		width: 100%;
 		position: relative;
@@ -893,7 +894,67 @@ h2{
 			}
 		}
 	}
+	// End Subscribe
+	// Start Map
+	.map{
+		width: 100%;
+		position: relative;
+		background: @gradient-color;
+		overflow: hidden;
+		.row{
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0;
+			.addres-bar{
+				width: 50%;
+				padding: 50px 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.style-footer{
+					list-style-type: none;
+					li{
+						display: flex;
+						margin-bottom: 25px;
+						.footer-icon,
+						.footer-addres a{
+							color: white;
+						}
+						.footer-icon{
+							margin-right: 15px;
+							i{
+								font-size: 2.1rem;
+							}
+						}
+						.footer-addres{
+							a{
+							}
+						}
+					}
+				}
+			}
+			.map-bar{
+				width: 50%;
+				iframe{
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+	// End Map
 }
-
-
 // End Main
+// Start Footer
+.copyright{
+	width: 100%;
+	position: relative;
+	p{
+		width: 100%;
+		text-align: center;
+		padding: 15px 0;
+		text-transform: capitalize;
+		color: @lite-color-text;
+	}
+}
+// End Footer

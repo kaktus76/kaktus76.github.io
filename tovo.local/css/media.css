@@ -168,6 +168,9 @@
   .main .price .price-carousel .owl-stage-outer .owl-stage .owl-item {
     width: 290px;
   }
+  .copyright p {
+    font-size: 0.8rem;
+  }
 }
 @media (max-width: 990px) {
   .container {
@@ -426,6 +429,10 @@
   .main .contact .row .cont-form input {
     width: 100% !important;
   }
+  .main .map .row .addres-bar,
+  .main .map .row .map-bar {
+    width: 100%;
+  }
 }
 @media (max-width: 576px) {
   .main .about .about-contain .about-opp {
@@ -449,6 +456,21 @@
     border: 1px solid #cac6c6;
     border-radius: 10px;
     overflow: hidden;
+  }
+  .main .blog .blog-carousel .sl-dots {
+    right: 40%;
+  }
+  .main .blog .blog-carousel .sls-stage-outer .sl-stage .sl-item {
+    width: 370px;
+  }
+  .main .price .price-carousel .owl-stage-outer .owl-stage .owl-item {
+    width: 390px;
+  }
+  .main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .feature li {
+    padding: 5px;
+  }
+  .main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .btn {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=./media.css.map */
