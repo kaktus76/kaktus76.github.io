@@ -473,4 +473,47 @@
     width: 50%;
   }
 }
+@media (max-width: 375px) {
+  .header .home-decor .circle1 {
+    top: 110px;
+    right: 35px;
+  }
+  .header .home-decor .circle2 {
+    left: 30px;
+    top: 500px;
+  }
+  .header .home-decor .circle3 {
+    left: 55px;
+  }
+  .main .about {
+    padding: 40px 0;
+  }
+  .main .screenshot .screenshot-box {
+    height: auto;
+  }
+  .main .screenshot .screenshot-box .screenshot-carousel {
+    height: 265px;
+  }
+  .main .screenshot .screenshot-box .screenshot-carousel .owl-stage-outer .owl-stage {
+    left: -260px;
+  }
+  .main .screenshot .screenshot-box .screenshot-carousel .owl-stage-outer .owl-stage .owl-item {
+    width: 150px;
+  }
+  .main .blog .blog-carousel .sls-stage-outer .sl-stage .sl-item {
+    width: 330px;
+  }
+  .main .price .price-carousel .price-item {
+    width: 330px;
+  }
+  .main .map .row .addres-bar {
+    padding: 20px 0;
+  }
+  .main .map .row .addres-bar .style-footer li .footer-icon i {
+    font-size: 1.5rem;
+  }
+  .main .map .row .addres-bar .style-footer li .footer-addres a {
+    font-size: 0.93rem;
+  }
+}
 /*# sourceMappingURL=./media.css.map */
