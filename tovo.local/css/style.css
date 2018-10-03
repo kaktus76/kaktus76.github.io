@@ -149,7 +149,7 @@ h2 {
   width: auto;
 }
 .header .navbar .navbar-toggle {
-  display: block;
+  display: none;
 }
 .header .navbar .navbar-box {
   width: 80%;
