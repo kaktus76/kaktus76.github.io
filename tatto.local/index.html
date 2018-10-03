@@ -18,36 +18,26 @@
 			</div>
 		</div>
 	</header>
-	
-	<section class="modal">
+	<!-- MODAL -->
+	<section id="modal" class="modal">
 			<div class="modal-block">
 				<div class="row">
-					<a href="#" class="close">
+					<div id="close">
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" version="1.1" height="64" viewBox="0 0 64 64" enable-background="new 0 0 64 64" data-livestyle-extension="available">
 						  <g>
 						    <path fill="#1D1D1B" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
 						  </g>
 						</svg>
-					</a>
+					</div>
 					<p>Чтобы записаться на консультацию, заполните форму</p>
 					<form action="#">
-						
-						<label>
-							Введите имя
-							<br>
-							<input type="text" placeholder="Введите имя">
-						</label>
-						<br>
-						<label for="">
-							Введите номер телефона
-							<br>
-							<input type="text" placeholder="Введите номер телефона">
-						</label>
-						<br>
+						<span>Введите имя</span>
+						<input type="text" placeholder="Введите имя">
+						<span>Введите номер телефона</span>
+						<input type="tel" placeholder="Введите номер телефона">
 						<button type="submit">Записаться на консультацию</button>
-						<br>
-						<span>Мы не передаем Вашу персональную информацию третьим лицам.</span>
 					</form>
+					<p class="form-text">Мы не передаем Вашу персональную информацию третьим лицам.</p>
 				</div>
 			</div>
 		</section>
@@ -56,13 +46,15 @@
 		<section class="navig">
 			<div class="container">
 				<div class="row">
-					<input type="checkbox" >
-					<div class="menu-toggle">
+					<input type="checkbox" id="btn" name="tab">
+					<label for="btn">
 						<i class="fas fa-bars"></i>
+					</label>
+					<div id="menu-toggle" >
+						<a href="#">Нанесение татуировок</a>
+						<a href="#">Исправление и перекрытие</a>
+						<a href="#">Коррекция и рестоврация</a>
 					</div>
-					<a href="#">Нанесение татуировок</a>
-					<a href="#">Исправление и перекрытие</a>
-					<a href="#">Коррекция и рестоврация</a>
 				</div>
 			</div>
 		</section>
@@ -83,9 +75,9 @@
 					<p class="text-bold">
 						или позвоните по телефону: 8-903-347-18-65
 					</p>
-					<button>
-						Записаться на консультацию
-					</button>
+						<button>
+							Записаться на консультацию
+						</button>
 					<p class="issues">
 						Ещё есть вопросы? Тогда смотрите дальше.
 					</p>
@@ -157,18 +149,22 @@
 				</div>
 			</div>
 		</section>
+		<!-- Start Social Section -->
 		<section class="social">
 			<div class="container">
 				<div class="row">
-					<input type="checkbox">
-					<div class="menu-toggle">
+					<input type="checkbox" id="btn2">
+					<label for="btn2">
 						<i class="fas fa-bars"></i>
+					</label>
+					<div id="menu-toggle2">
+						<a href="#">Vkontakte</a>
+						<a href="#">Instagram</a>
 					</div>
-					<a href="#">Vkontakte</a>
-					<a href="#">Instagram</a>
 				</div>
 			</div>
 		</section>
+		<!-- End Social Section -->
 
 		<section class="info">
 			<div class="container">
@@ -242,7 +238,7 @@
 							</ul>
 						</div>
 					</div>
-					<br><br><br><br>
+					<br><br>
 					<h2>Коррекция и реставрация</h2>
 					<div class="overlap">
 						<div class="text">
@@ -359,23 +355,23 @@
 
 		<div class="container">
 			<div class="row">
-				
-
-
-
 				<div class="name">
 					<h3>Татуировки в Ярославле</h3> 
 				</div>
 				<div class="ooo">
 					<p>ООО «СтройТрейд», 123456, г.Москва, ул. Центральная 1, офис 100 ИНН 1234567890 ОГРН 123456789012</p>
-					<a href="#">Политика конфидециальности</a>
+					
+					<label for="policy">
+						Политика конфидециальности
+					</label>
+					
 				</div>
 				<div class="time">
 					<p>8-999-999-99-99</p>
 					<span>часы работы: с 10.00 до 18.00</span>
 				</div>
-				<input type="checkbox" checked>
-				<div class="policy">
+				<input id="policy" type="checkbox">
+				<div id="policy-text">
 					<div class="row">
 						<h3>Политика конфиденциальности</h3>
 						<p>Данный сайт уважает Ваше право и соблюдает конфиденциальность при заполнении, передаче и хранении Ваших конфиденциальных сведений.

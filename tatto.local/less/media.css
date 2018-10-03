@@ -1,0 +1,78 @@
+@media (max-width: 800px) {
+  .container {
+    max-width: 640px;
+  }
+  .main .navig label {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    line-height: 50px;
+  }
+  .main .navig label .fas {
+    font-size: 2.25rem;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+  }
+  .main .navig #btn:checked ~ #menu-toggle {
+    display: flex;
+  }
+  .main .navig #menu-toggle {
+    display: none;
+  }
+}
+@media (max-width: 960px) {
+  .container {
+    max-width: 768px;
+  }
+  .main .entry .row {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .main .entry .row .quality {
+    width: 33%;
+    padding: 20px;
+    font-size: 1.65rem;
+  }
+  .main .info h2 {
+    font-size: 1.65rem !important;
+  }
+  .main .info .block-info {
+    position: relative;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .main .info .block-info .image,
+  .main .info .block-info .text {
+    width: 450px;
+    margin: 0 auto;
+  }
+  .main .info .block-info .text p {
+    font-size: 1rem !important;
+  }
+  .main .info .block-info .text h3 {
+    font-size: 1rem !important;
+  }
+  .main .social .menu-toggle {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  footer .name {
+    display: none;
+  }
+  footer .ooo a {
+    width: 171px;
+  }
+  footer .name,
+  footer .ooo,
+  footer .time {
+    text-align: center;
+    width: 100% !important;
+  }
+}
