@@ -291,12 +291,17 @@
     left: 0;
     bottom: 20px;
   }
+  .main .screenshot .screenshot-box .screenshot-carousel .owl-stage-outer .owl-stage {
+    position: absolute;
+    left: -240px;
+  }
   .main .blog .blog-carousel .sl-dots {
     top: auto;
     bottom: -50px;
     right: 45%;
   }
   .main .blog .blog-carousel .sls-stage-outer .sl-stage .sl-item {
+    left: 200px;
     width: 330px;
   }
   .main .price {
@@ -310,7 +315,8 @@
     padding: 5px;
   }
   .main .price .price-carousel .owl-stage-outer .owl-stage .owl-item .price-item .price-block .btn {
-    width: 50%;
+    padding: 10px 15px;
+    width: 60%;
   }
   .main .contact {
     padding: 50px 0;
