@@ -62,7 +62,7 @@ p {
   font-size: 0.85rem;
   animation: scroll 2s infinite linear;
   cursor: pointer;
-  left: calc(45%);
+  left: calc(38%);
 }
 .intro__scroll-up .fas,
 .intro__scroll-down .fas {
@@ -96,6 +96,7 @@ p {
   background-image: url(../images/header/header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   overflow: hidden;
   /* Header Buttons */
   /* End Header Buttons */
@@ -390,6 +391,7 @@ p {
 }
 .header .intro-wrapper .row {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -552,18 +554,18 @@ p {
   background: #222;
   color: #fff;
 }
+.main .row-flex {
+  justify-content: space-between;
+}
 .main .servises {
   width: 100%;
   height: auto;
 }
-.main .servises .row-flex {
-  justify-content: space-between;
-}
-.main .servises .row-flex .servises-sec {
+.main .servises .servises-sec {
   width: 32%;
   min-height: 500px;
 }
-.main .servises .row-flex .servises-sec .servises-sec__top {
+.main .servises .servises-sec .servises-sec__top {
   padding-left: 30px;
   margin-bottom: 30px;
   width: 100%;
@@ -571,32 +573,32 @@ p {
   border-left: 1px solid#222;
   transition-duration: .5s;
 }
-.main .servises .row-flex .servises-sec .servises-sec__top .fab {
+.main .servises .servises-sec .servises-sec__top .fab {
   font-size: 3rem;
 }
-.main .servises .row-flex .servises-sec .servises-sec__top .servises-sec__top-title {
+.main .servises .servises-sec .servises-sec__top .servises-sec__top-title {
   font-weight: 600;
   font-size: 1.2rem;
   padding: 15px 0;
 }
-.main .servises .row-flex .servises-sec .servises-sec__top:hover {
+.main .servises .servises-sec .servises-sec__top:hover {
   box-shadow: 2px 2px 2px 2px #cecece;
   padding-left: 10px;
   padding-top: 10px;
 }
-.main .servises .row-flex .servises-sec .servises__sec-text {
+.main .servises .servises-sec .servises__sec-text {
   padding: 25px 0 15px 0;
   margin: 0 0 10px;
 }
-.main .servises .row-flex .servises-sec .servises__sec-more {
+.main .servises .servises-sec .servises__sec-more {
   color: #222;
   margin-top: 30px;
 }
-.main .servises .row-flex .servises-sec .servises__sec-more .fas {
+.main .servises .servises-sec .servises__sec-more .fas {
   padding-left: 10px;
   font-size: 0.8rem;
 }
-.main .servises .row-flex .servises-sec .servises__sec-more:hover {
+.main .servises .servises-sec .servises__sec-more:hover {
   color: #23527c;
 }
 .main .row-flex {
@@ -609,6 +611,7 @@ p {
   background-image: url(../images/ctabg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   color: #fff;
 }
 .main .exclusive .exclusive-content {
@@ -619,17 +622,21 @@ p {
   font-size: 1.5rem;
 }
 .main .exclusive .exclusive__btn {
-  display: block;
+  width: 180px;
   height: 50px;
-  background: #222;
+  background-color: #222;
   border: 2px solid #222;
-  padding: 15px 25px;
-  color: #fff;
-  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
   transition: .3s ease;
+  cursor: pointer;
 }
 .main .exclusive .exclusive__btn:hover {
   background: transparent;
+}
+.main .exclusive .exclusive__btn a {
+  color: #fff;
+  font-weight: 900;
 }
 .main .portfolio {
   width: 100%;
@@ -640,7 +647,7 @@ p {
   text-align: center;
 }
 .main .portfolio .portfolio__title h2 {
-  font-size: 7.5rem;
+  font-size: 7.5em;
   font-weight: 900;
   line-height: 1.1em;
   color: #eeeeee;
@@ -677,37 +684,38 @@ p {
   position: relative;
   top: -100px;
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item {
   width: auto;
   height: 100%;
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item img {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item img {
+  width: 100%;
   transition: .5s ease;
   transform: scale(1.05);
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item:hover img {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item:hover img {
   transform: scale(1);
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item:hover .overlay {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item:hover .overlay {
   opacity: 0.7;
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item:hover .overlay .overlay-title {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item:hover .overlay .overlay-title {
   transform: translateY(0);
   opacity: 1;
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item:hover .overlay .overlay-link a {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item:hover .overlay .overlay-link a {
   transform: scale(1);
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item .overlay {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -717,15 +725,15 @@ p {
   opacity: 0;
   transition: .5s ease;
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item .overlay .overlay-link {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item .overlay .overlay-link {
   position: absolute;
   top: 40px;
   right: 40px;
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item .overlay .overlay-link a {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item .overlay .overlay-link a {
   transform-origin: 50% 0;
   transform: scale(0);
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.452);
   margin-right: 5px;
   color: #fff;
   border: 1px solid #fff;
@@ -736,14 +744,14 @@ p {
   text-align: center;
   transition: .4s ease;
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item .overlay .overlay-link a:hover {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item .overlay .overlay-link a:hover {
   color: #000;
   background: rgba(255, 255, 255, 0.808);
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item .overlay .overlay-link a:last-child {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item .overlay .overlay-link a:last-child {
   margin-right: 0;
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item .overlay .overlay-title {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item .overlay .overlay-title {
   position: absolute;
   bottom: 10%;
   left: 10%;
@@ -752,15 +760,15 @@ p {
   transition: .4s ease;
   opacity: 1;
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item .overlay .overlay-title span {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item .overlay .overlay-title span {
   color: #fff;
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item .overlay .overlay-title h4 {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item .overlay .overlay-title h4 {
   text-transform: capitalize;
   font-size: 1.33rem;
   font-weight: 600;
 }
-.main .portfolio .portfolio__filter .portfolio__filter-gallery .fotos-works .item .overlay .overlay-title h4 a {
+.main .portfolio .portfolio__filter .portfolio__filter-gallery .photos-works .item .overlay .overlay-title h4 a {
   color: #fff;
 }
 .main .portfolio .portfolio__view-all {
@@ -810,7 +818,6 @@ p {
   width: 3500px;
   height: auto;
   display: flex;
-  animation: scroll-slider 15s ease infinite alternate;
 }
 .main .slider .slider-hidden .slider-content .slide {
   position: relative;
@@ -950,10 +957,17 @@ p {
   padding: 6px 12px;
   font-size: .9rem;
   margin-bottom: 24px;
+  transition: .3s ease;
 }
 .main .contact .contact__form .form input::placeholder,
 .main .contact .contact__form .form textarea::placeholder {
   color: #999;
+}
+.main .contact .contact__form .form input:focus,
+.main .contact .contact__form .form textarea:focus,
+.main .contact .contact__form .form input:hover,
+.main .contact .contact__form .form textarea:hover {
+  border-bottom: 1px solid #222;
 }
 .main .contact .contact__form .form .form__btn {
   padding: 12px 25px;
