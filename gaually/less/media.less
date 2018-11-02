@@ -1,4 +1,4 @@
-//out:../css/media.css
+// out: ../css/media.css, compress: true, sourceMap: true
 
 
 @media ( max-width: 1130px ) {
@@ -48,6 +48,18 @@
       .row{
         .intro{
           width: 60%;
+        }
+      }
+    }
+  }
+  .main {
+    .slider{
+      .owl-carousel {
+        .slide {
+          .slide__comment{
+            width: 70%;
+            right: 10%;
+          }
         }
       }
     }
@@ -137,11 +149,11 @@
     }
     .intro-wrapper{
       .intro__scroll-down{
-        left: calc(100% - 65px);
+        left: 50%;
       }
       .row{
         .intro{
-          width: 100%;
+          width: 90%;
           top: 20%;
           .intro__title{
             font-size: 2.1rem;
@@ -180,47 +192,39 @@
         text-align: center;
       }
     }
-    .portfolio{
-      .portfolio__title{
-        h2{
-          font-size: 5rem;
-        }
-      }
-      .portfolio__filter{
-        .portfolio__filter-nav{
-          top: -80px;
-        }
-        .portfolio__filter-gallery{
-          .photos-works{
-            .item{
-              // width: 90%;
-              max-height: 450px;
-              .overlay{
-
-                .overlay-link{
-                  width: 100%;
-                  text-align: center;
-                  right: 0;
-                  top: calc(100% - 55px);
-                  a{
-                    width: 50px;
-                    height: 50px;
-                    line-height: 50px;
-                    border-radius: 50%;
-                    font-size: 1.3rem;
-                  }
-                }
-              }
-            }
-          }
-        }
+    .portfolio__title{
+      top: 100px;
+      h2{
+        font-size: 5rem;
       }
     }
+    .portfolio__button {
+      button {
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+  
     .slider{
       .slider-container__title{
         right: 50px;
         h2{
-          font-size: 4.5rem;
+          font-size: 1.8rem;
+        }
+      }
+      .owl-carousel {
+        .slide {
+          .slide__comment{
+            padding-top: 20px;
+            width: 50%;
+            left: 0;
+            bottom: 0px;
+            right: 0;
+            .comment{
+              margin-bottom: 10px;
+              line-height: 1.2rem;
+            }
+          }
         }
       }
       .slider-hidden{
@@ -275,6 +279,18 @@
     .head{
       .nav{
         width: 60%;
+        .nav-menu{
+          width: 100%;
+          li{
+            text-align: left;
+            a:before{
+              display: none;
+            }
+            .submenu{
+              left: 100px;
+            }
+          }
+        }
       }
     }
     .intro-wrapper{
@@ -325,4 +341,6 @@
       }
     }
   } 
+  .footer {
+  }
 }

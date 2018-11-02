@@ -1,4 +1,4 @@
-//out: ../css/style.css
+// out: ../css/style.css, compress: true, sourceMap: true
 
 /* ШРИФТЫ */
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900');
@@ -46,6 +46,12 @@ p{
 	padding: 150px 0; 
 }
 
+
+
+
+
+
+
 /* Animation Scroll Down and Up */
 @keyframes scroll {
 	0% {
@@ -70,7 +76,8 @@ p{
 	font-size: 0.85rem;
 	animation: scroll 2s infinite linear;
 	cursor: pointer;
-	left: calc(100% - 62px);
+	left: 50%;
+	margin-left: -60px;
 	.fas{
 		margin-bottom: 20px;
 	}
@@ -108,6 +115,13 @@ p{
 	background-position: center;
 	overflow: hidden;
 	// animation: bg 3s infinite linear;
+	.stickytop {
+		position:fixed !important;
+		background: #ffffff !important;
+		z-index: 110;
+		height: 80px !important;
+		transition: .3s ease;
+	}
 	.head{
 		position: relative;
 		width: 100%;
@@ -118,6 +132,7 @@ p{
 		flex-wrap: wrap;
 		border-bottom: 1px solid #c7c7c73d;
 		background: transparent;
+		
 		/* LOGO */
 		.logo{
 		}
@@ -174,7 +189,7 @@ p{
 					position: absolute;
 					z-index: 99;
 					display: block;
-					top: 73px;
+					top: 48px;
 					background: #fff;
 					height: auto;
 					width: auto;
@@ -317,7 +332,7 @@ p{
 			padding: 30px;
 			transition: .3s ease;
 			z-index: 100;
-		
+			overflow-y: auto;
 			.exit{
 				position: relative;
 				display: block;
@@ -418,7 +433,8 @@ p{
 			justify-content: center;
 			align-items: center;
 			width: 100%;
-			height: 100%;	
+			height: 100%;
+			padding: 15px;
 			.intro{
 				position: absolute;
 				width: 50%;
@@ -463,6 +479,7 @@ p{
 	width: 100%;
 	height: auto;
 	position: relative;
+	overflow: hidden;
 	/* Start Section Welcome */
 	.welcome{
 		width: 100%;
@@ -664,151 +681,128 @@ p{
 	/* Start Section Portfolio */
 	.portfolio{
 		width: 100%;
-		height: 100%;
 		position: relative;
-		.portfolio__title{
-			text-align: center;
-			h2{
-				font-size: 7.5em;
-				font-weight: 900;
-				line-height: 1.1em;
-				color: #eeeeee;
+	}
+	.portfolio__title{
+		width: 100%;
+		position: absolute;
+		z-index: 4;
+		top: 145px;
+		text-align: center;
+		
+		h2{
+			font-weight: 900;
+			font-size: 7.3rem;
+			color: #eee;
+		}
+	}
+	.portfolio__button{
+		position: relative;
+		z-index: 4;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		.current {
+			border: 1px solid #dddddd;
+		}
+		button {
+			background-color: transparent;
+			outline: none;
+			border: 1px solid transparent;
+			font-size: 1rem;
+			margin-right: 20px;
+			padding: 10px 30px;
+			cursor: pointer;
+			transition: .4s ease;
+			&:hover{
+				border: 1px solid #e3e3e3;
+				color: #23527c;
 			}
 		}
-		.portfolio__filter{
+	}
+	.portfolio__gallery{
+		position: relative;
+		margin-top: 80px;
+		width: 100%;
+		.item{
+			width: auto;
+			margin-bottom: 30px;
 			position: relative;
-			.portfolio__filter-nav{
-				position: relative;
-				text-align: center;
-				top: -110px;
-				.portfolio__filter-tabs{
-					margin-bottom: 55px;
-					a:hover,
-					a.active{
-						border: 1px solid #dddddd;
-						color: #23527c;
-					}
-					a{
-						border: 1px solid transparent;
-						color: #222;
-						font-weight: 500;
-						padding: 10px 30px;
-						margin-right: 20px;
-						margin-bottom: 15px;
-						transition-duration: .5s;	
-						display: inline-block;
-					}
-				}
-			}
-			.portfolio__filter-gallery{
+			overflow: hidden;
+			img{
 				width: 100%;
-				height: auto;
-				position: relative;
-				top: -100px;
-				.photos-works{
-					display: flex;
-					justify-content: space-around;
-					align-items: center;
-					flex-wrap: wrap;
-					.item{
-						width: auto;
-						height: 100%;
-						margin-bottom: 30px;
-						position: relative;
-						overflow: hidden;
-						img{
-							width: 100%;
-							transition: .5s ease;
-							transform: scale(1.05);
+				transition: .5s ease;
+				transform: scale(1.05);
+			}
+			&:hover img{
+				transform: scale(1);
+			}
+			&:hover .overlay,
+			&:hover .overlay-title{
+				opacity: 0.7;
+			}
+			&:hover .overlay .overlay-title{
+				transform: translateY(0);
+				opacity: 1;
+			}
+			&:hover .overlay .overlay-link a{
+				transform: scale(1);
+			}
+			.overlay{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #222;
+				opacity: 0;
+				transition: .5s ease;
+				.overlay-link{
+					position: absolute;
+					top: 40px;
+					right: 40px;
+					a{
+						transform-origin: 50% 0;
+						transform: scale(0);
+						background: rgba(255, 255, 255, 0.452);
+						margin-right: 5px;
+						color: #fff;
+						border: 1px solid #fff;
+						height: 40px;
+						display: inline-block;
+						line-height: 40px;
+						width: 40px;
+						text-align: center;
+						transition: .4s ease;
+						&:hover{
+							color: #000;
+							background: rgba(255, 255, 255, 0.808);
 						}
-						&:hover img{
-							transform: scale(1);
-						}
-						&:hover .overlay{
-							opacity: 0.7;
-						}
-						&:hover .overlay .overlay-title{
-							transform: translateY(0);
-							opacity: 1;
-						}
-						&:hover .overlay .overlay-link a{
-							transform: scale(1);
-						}
-						.overlay{
-							position: absolute;
-							top: 0;
-							left: 0;
-							width: 100%;
-							height: 100%;
-							background: #222;
-							opacity: 0;
-							transition: .5s ease;
-							.overlay-link{
-								position: absolute;
-								top: 40px;
-								right: 40px;
-								a{
-									transform-origin: 50% 0;
-									transform: scale(0);
-									background: rgba(255, 255, 255, 0.452);
-									margin-right: 5px;
-									color: #fff;
-									border: 1px solid #fff;
-									height: 40px;
-									display: inline-block;
-									line-height: 40px;
-									width: 40px;
-									text-align: center;
-									transition: .4s ease;
-									&:hover{
-										color: #000;
-										background: rgba(255, 255, 255, 0.808);
-									}
-									&:last-child{
-										margin-right: 0;
-									}
-								}
-							}
-							.overlay-title{
-								position: absolute;
-								bottom: 10%;
-								left: 10%;
-								transform: translateY(10px);
-								opacity: 0;
-								transition: .4s ease;
-								opacity: 1;
-								span{
-									color: #fff;
-								}
-								h4{
-									text-transform: capitalize;
-									font-size: 1.33rem;
-									font-weight: 600;
-									a{
-										color: #fff;
-									}
-								}
-							}
+						&:last-child{
+							margin-right: 0;
 						}
 					}
 				}
 			}
-		}
-		.portfolio__view-all{
-			text-align: center;
-			margin-top: -40px;
-			a{
-				padding: 12px 45px;
-				font-weight: 900;
-				background: #222;
-				color: #fff;
-				font-size: 0.9rem;
-				border: 2px solid #222;
-				transition: .3s ease;
-				&:hover{
-					background: transparent;
-					color: #222;
-				}
+			.overlay-title {
+				position: absolute;
+				bottom: 10%;
+				left: 10%;
+				transform: translateY(10px);
+				opacity: 0;
+				transition: .4s ease;
+					span{
+						color: #fff;
+					}
+					h4{
+						text-transform: capitalize;
+						font-size: 1.33rem;
+						font-weight: 600;
+						a{
+							color: #fff;
+						}
+					}
 			}
 		}
 	}
@@ -816,14 +810,16 @@ p{
 	/* Start Slider Section */
 	.slider{
 		position: relative;
+		margin: 0 auto;
 		padding-bottom: 150px;
+		max-width: 1024px;
 		width: 100%;
 		height: auto;
 		.slider-container__title{
 			position: absolute;
 			z-index: 99;
-			right: 150px;
-			top: 40px;
+			right: -50px;
+			top: 30px;
 			text-align: center;
 			h2{
 				font-size: 7.5rem;
@@ -832,79 +828,69 @@ p{
 				color: #eeeeee;
 			}
 		}
-		.slider-hidden{
-			position: relative;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			.slider-content{
+		.owl-carousel {
+			z-index: 100;
+			.slide{
 				position: relative;
-				width: 3500px;
-				height: auto;
-				display: flex;
-				// animation: scroll-slider 15s ease infinite alternate;
-				.slide{
-					position: relative;
-					margin: 0 auto;
-					width: 970px;
-					height: 400px;
-					.slide__avatar{
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 250px;
-						height: 350px;
-						z-index: 100;
-						img{
-							width: 100%;
-						}
+				margin: 0 auto;
+				width: 970px;
+				height: 400px;
+				.slide__avatar{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 250px;
+					height: 350px;
+					z-index: 100;
+					img{
+						width: 100%;
 					}
-					.slide__comment{
-						padding: 60px 30px 10px 30px;
-						width: 80%;
-						background: #ffffff;
-						position: absolute;
-						bottom: 3px;
-						right: 0;
-						z-index: 101;
-						box-shadow: 2px 2px 2px #cecece;
-						.comment{
-							color: #848484;
-							line-height: 1.8em;
-							font-weight: 400;
-							margin-bottom: 40px;
-						}
-						.autor{
-							.autor__name{
-								color: #222222;
-								font-weight: 800;
-								line-height: 1.6em;
-							}
+				}
+				.slide__comment{
+					padding: 60px 30px 10px 30px;
+					width: 80%;
+					background: #ffffff;
+					position: absolute;
+					bottom: 3px;
+					right: 0;
+					z-index: 101;
+					box-shadow: 2px 2px 2px #cecece;
+					.comment{
+						color: #848484;
+						line-height: 1.8em;
+						font-weight: 400;
+						margin-bottom: 40px;
+					}
+					.autor{
+						.autor__name{
+							color: #222222;
+							font-weight: 800;
+							line-height: 1.6em;
 						}
 					}
 				}
-			}
-			.slider-nav{
-				position: absolute;
-				top: 50%;
-				left: 0;
-				display: flex;
-				justify-content: space-between;
-				width: 100%;
-				z-index: 102;
-				background: transparent;
-				.slider-nav__prev,
-				.slider-nav__next{
-					font-size: 1.2rem;
-					color: #d1d1d1;
-					width: 50px;
-					height: 50px;
-					line-height: 48px;
-					text-align: center;
-					cursor: pointer;
-					transition: .3s ease;
-					&:hover{
-						color: #222;
+				.slider-nav{
+					position: absolute;
+					top: 50%;
+					left: 0;
+					display: flex;
+					justify-content: space-between;
+					width: 100%;
+					z-index: 102;
+					background: transparent;
+					.slider-nav__prev,
+					.slider-nav__next{
+						font-size: 1.2rem;
+						color: #d1d1d1;
+						width: 50px;
+						height: 50px;
+						line-height: 48px;
+						text-align: center;
+						cursor: pointer;
+						transition: .3s ease;
+						&:hover{
+							color: #222;
+						}
 					}
 				}
 			}
@@ -916,19 +902,8 @@ p{
 		width: 100%;
 		height: auto;
 		padding-bottom: 150px;
-		.clients-hidden{
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			.clients-content{
-				height: 100%;
-				width: 4000px;
-				display: flex;
-				.client{
-					width: 200px;
-					cursor: pointer;
-				}
-			}
+		img{
+			width: 100px;
 		}
 	}
 	/* End Clients Section */
