@@ -1,4 +1,3 @@
-
 $('.intro__scroll-down, .intro__scroll-up, .intro__btn-portfolio, .home, .servises, .portfolio, .footer, .about').on('click', function () {
   var el = $(this);
   var dest = el.attr('href'); // получаем направление
@@ -73,7 +72,6 @@ $('.portfolio__button').on('click', '.filter', function () {
   });
 });
 
-
 $('.portfolio__button button').click(function () {
   $('.portfolio__button .current').removeClass('current');
   $(this).addClass('current');
@@ -89,7 +87,6 @@ $('.portfolio__button button').click(function () {
   return false;
 });
 portfolioactive();
-
 
 
 /* MODAL */
