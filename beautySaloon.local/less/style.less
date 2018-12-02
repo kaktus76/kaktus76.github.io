@@ -416,30 +416,67 @@ main{
 			width: 100%;
 			height: 100%;
 			background: rgba(0, 0, 0, 0.795);
-			.wrapper-slider{
+			.slide-hidden{
 				width: 100%;
 				height: 100%;
-				position: relative;
-				display: flex;
-				justify-content: center;
-				align-items: center;
 				overflow: hidden;
-				.slide{
-					width: 80%;
+				position: relative;
+				.dots{
 					position: absolute;
-					text-align: center;
-					.name{
-						margin-top: 20px;
-						color: @pinkColor;
-						font-weight: 500;
+					z-index: 20;
+					bottom: 20px;
+					left: 50%;
+					background: transparent;
+					width: 60px;
+					height: 20px;
+					display: flex;
+					align-items: center;
+					justify-content: space-around;
+					input{
+						display: none;
 					}
-					.comment{
-						margin-top: 20px;
-						font-size: @btnSend;
+					.dot{
+						cursor: pointer;
+						width: 10px;
+						height: 10px;
+						background: @liteGrayColor;
+						border-radius: 50%;
+						transition: .3s ease;
+						&:hover{
+							background: #000;
+						}
+				}
+			}
+			.slide-max-width{
+				z-index: 10;
+				height: 100%;
+				width: 3300px;
+					position: relative;
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					
+					.slide{
+						width: 800px;
+						text-align: center;
+						.client{
+							border-radius: 50%;
+							margin-bottom: 20px;
+						}
+						.name{
+							color: @pinkColor;
+							font-weight: 600;
+							margin-bottom: 20px;
+						}
+						.comment{
+							font-size: 1.25rem;
+							margin-bottom: 20px;
+						}
 					}
 				}
 			}
 		}
+		
 	}
 
 	.contacts{

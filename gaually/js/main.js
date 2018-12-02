@@ -35,16 +35,16 @@ $(document).ready(function () {
       0: {
         items: 1
       },
-      450: {
+      375: {
         items: 2
       },
-      768: {
+      770: {
         items: 3
       },
-      900: {
+      940: {
         items: 4
       },
-      1100: {
+      1130: {
         items: 5
       }
     }
@@ -87,6 +87,3 @@ $('.portfolio__button button').click(function () {
   return false;
 });
 portfolioactive();
-
-
-/* MODAL */

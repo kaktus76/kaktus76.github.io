@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
+
+	<!-- Owl carousel -->
+	<link rel="stylesheet" href="libs/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="libs/assets/owl.theme.default.min.css">
+
 	<link rel="shortcut icon" href="images/logoimage.png" type="image/png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -32,52 +37,54 @@
 		<div class="container">
 			<div class="row">
 				<!-- Start navbar -->
-				<nav class="navbar">
+				<nav class="navbar navbar_fixed">
 					<a href="#" class="logo">
 						<img src="images/logo.png" alt="LOGO">
 					</a>
 					<button class="navbar-toggle">
-						<div class="navbar-toggle-icon"></div>
+						<span></span>
+						<span></span>
+						<span></span>
 					</button>
 					<div class="navbar-box">
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a href="#home" class="nav-link active">
+								<a href="#home" class="nav-link home active">
 									Home
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="#about" class="nav-link">
+								<a href="#about" class="nav-link about">
 									About
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="#features" class="nav-link">
+								<a href="#features" class="nav-link features">
 									Feature
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="#screenshot" class="nav-link">
+								<a href="#screenshot" class="nav-link screenshot">
 									Screenshot
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="#team" class="nav-link">
+								<a href="#team" class="nav-link team">
 									Team
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="#blog" class="nav-link">
+								<a href="#blog" class="nav-link blog">
 									Blog
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="#price" class="nav-link">
+								<a href="#price" class="nav-link price">
 									Price
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="#contact" class="nav-link">
+								<a href="#contact" class="nav-link contact">
 									Contact Us
 								</a>
 							</li>
@@ -99,16 +106,16 @@
 						</h1>
 						<p>Enhance Your Business Ideas With Powerful, Responsive, Elegant TOVO Theme.</p>
 						<div class="market">
-							<a href="">
-								<img src="images/store/appstore.png" alt="appstore">
+							<a class="apple" href="https://itunes.apple.com/ru/store" alt="apple-store" title="apple-store">
 							</a>
-							<a href="">
-								<img src="images/store/play-store.png" alt="play-market">
+							<a class="google" href="https://play.google.com/store"
+							alt="google-play" title="google-play">
+							
 							</a>
 						</div>
 					</div>
 					<div class="home-phone">
-						<div class="phone">
+						<div class="phone" data-tilt>
 							<img src="images/mobile-home-page.png" alt="">
 						</div>
 					</div>
@@ -167,8 +174,10 @@
 					</div>
 					</div>
 					<div class="about-right">
-						<div class="about-phone">
-							<img src="images/aboutus.png" alt="">
+						<div class="about-right_bg">
+							<div class="about-phone">
+								<img src="images/aboutus.png" alt="">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -247,81 +256,53 @@
 			<div class="screenshot-circle3">
 				<img src="images/animation/main-banner1.png" alt="">
 			</div>
-			<div class="container">
-				<div class="row">
-					<div class="screenshot-box">
-						<!-- <img class="light" src="images/slide/screenshot/light.png" alt=""> -->
-						<img class="sc-mob" src="images/slide/screenshot/screenshot-mob.png" alt="">
-						<!-- <img class="light-right" src="images/slide/screenshot/light-right.png" alt=""> -->
-						<div class="screenshot-carousel">
-							<div class="owl-stage-outer">
-								<div class="owl-stage">
-									<div class="owl-item active">
-										<div class="screenshot-item">
-											<img src="images/slide/screenshot/1.jpg" alt="">
-										</div>
-									</div>
-									<div class="owl-item active">
-										<div class="screenshot-item">
-											<img src="images/slide/screenshot/2.jpg" alt="">
-										</div>
-									</div>
-									<div class="owl-item active center">
-										<div class="screenshot-item">
-											<img src="images/slide/screenshot/3.jpg" alt="">
-										</div>
-									</div>
-									<div class="owl-item active">
-										<div class="screenshot-item">
-											<img src="images/slide/screenshot/4.jpg" alt="">
-										</div>
-									</div>
-									<div class="owl-item active">
-										<div class="screenshot-item">
-											<img src="images/slide/screenshot/5.jpg" alt="">
-										</div>
-									</div>
-									<div class="owl-item">
-										<div class="screenshot-item">
-											<img src="images/slide/screenshot/6.jpg" alt="">
-										</div>
-									</div>
-									<div class="owl-item">
-										<div class="screenshot-item">
-											<img src="images/slide/screenshot/7.jpg" alt="">
-										</div>
-									</div>
-									<div class="owl-item">
-										<div class="screenshot-item">
-											<img src="images/slide/screenshot/8.jpg" alt="">
-										</div>
-									</div>
-									<div class="owl-item">
-										<div class="screenshot-item">
-											<img src="images/slide/screenshot/9.jpg" alt="">
-										</div>
-									</div>
-									<div class="owl-item">
-										<div class="screenshot-item">
-											<img src="images/slide/screenshot/10.jpg" alt="">
-										</div>
-									</div>
-									<div class="owl-item">
-										<div class="screenshot-item">
-											<img src="images/slide/screenshot/11.jpg" alt="">
-										</div>
-									</div>
-									<div class="owl-item">
-										<div class="screenshot-item">
-											<img src="images/slide/screenshot/12.jpg" alt="">
-										</div>
-									</div>
+				<div class="container">
+					<div class="row">
+						<div class="screenshot-box">
+							<img class="mobile-light-left" src="images/slide/screenshot/light.png" alt="">
+							<img class="sc-mob" src="images/slide/screenshot/screenshot-mob.png" alt="">
+							<img class="mobile-light-right" src="images/slide/screenshot/light-right.png" alt="">
+							<div class="screenshot-carousel owl-carousel">
+								<div class="screenshot-item">
+									<img src="images/slide/screenshot/1.jpg" alt="">
+								</div>
+								<div class="screenshot-item">
+									<img src="images/slide/screenshot/2.jpg" alt="">
+								</div>
+								<div class="screenshot-item">
+									<img src="images/slide/screenshot/3.jpg" alt="">
+								</div>
+								<div class="screenshot-item">
+									<img src="images/slide/screenshot/4.jpg" alt="">
+								</div>
+								<div class="screenshot-item">
+									<img src="images/slide/screenshot/5.jpg" alt="">
+								</div>
+								<div class="screenshot-item">
+									<img src="images/slide/screenshot/6.jpg" alt="">
+								</div>
+								<div class="screenshot-item">
+									<img src="images/slide/screenshot/7.jpg" alt="">
+								</div>
+								<div class="screenshot-item">
+									<img src="images/slide/screenshot/8.jpg" alt="">
+								</div>
+								<div class="screenshot-item">
+									<img src="images/slide/screenshot/9.jpg" alt="">
+								</div>
+								<div class="screenshot-item">
+									<img src="images/slide/screenshot/10.jpg" alt="">
+								</div>
+								<div class="screenshot-item">
+									<img src="images/slide/screenshot/11.jpg" alt="">
+								</div>
+								<div class="screenshot-item">
+									<img src="images/slide/screenshot/12.jpg" alt="">
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 		</section>
 		<!-- End Screenshot -->
 		<!-- Start Blog -->
@@ -329,78 +310,149 @@
 			<div class="container">
 				<div class="row">
 					<div class="box-blog">
-						<h2>LATEST <span class="f-bold">
-							BLOG
-						</span>
-					</h2>
-					<div class="blog-carousel">
-						<div class="sl-dots">
-							<button class="sl-dot">
-								<span class="active"></span>
-							</button>
-							<button class="sl-dot">
-								<span></span>
-							</button>
-							<button class="sl-dot">
-								<span></span>
-							</button>
-						</div>
-						<div class="sls-stage-outer">
-							<div class="sl-stage">
-								<div class="sl-item">
-									<div class="box-img">
-										<div class="sl-img">
-											<a href="#">
-												<img src="images/slide/blog/img-1.jpg" alt="">
-											</a>
-										</div>
-									</div>
-									<div class="box-text">
-										<h6>15 jun 2016</h6>
+						<h2>LATEST 
+							<span class="f-bold">
+								BLOG
+							</span>
+						</h2>
+						<div class="owl-carousel blog-carousel">
+							<div class="sl-item">
+								<div class="box-img">
+									<div class="sl-img">
 										<a href="#">
-											<h3>Lorem Ipsum has been the industry's standard dummy text</h3>
+											<img src="images/slide/blog/img-1.jpg" alt="">
 										</a>
-										<br>
-										<h5>Posted by johanson let, 15 hits, 30 comment</h5>
 									</div>
 								</div>
-								<div class="sl-item">
-									<div class="box-img">
-										<div class="sl-img">
-											<a href="#">
-												<img src="images/slide/blog/img-2.jpg" alt="">
-											</a>
-										</div>
-									</div>
-									<div class="box-text">
-										<h6>25 january 2018</h6>
+								<div class="box-text">
+									<h6>15 jun 2016</h6>
+									<a href="#">
+										<h3>Lorem Ipsum has been the industry's standard dummy text</h3>
+									</a>
+									<br>
+									<h5>Posted by johanson let, 15 hits, 30 comment</h5>
+								</div>
+							</div>
+							<div class="sl-item">
+								<div class="box-img">
+									<div class="sl-img">
 										<a href="#">
-											<h3>Lorem Ipsum has been the industry's standard dummy text</h3>
+											<img src="images/slide/blog/img-2.jpg" alt="">
 										</a>
-										<br>
-										<h5>Posted by johanson let, 15 hits, 30 comment</h5>
 									</div>
 								</div>
-								<div class="sl-item">
-									<div class="box-img">
-										<div class="sl-img">
-											<a href="#">
-												<img src="images/slide/blog/img-3.jpg" alt="">
-											</a>
-										</div>
-									</div>
-									<div class="box-text">
-										<h6>28 december 2017</h6>
+								<div class="box-text">
+									<h6>25 january 2018</h6>
+									<a href="#">
+										<h3>Lorem Ipsum has been the industry's standard dummy text</h3>
+									</a>
+									<br>
+									<h5>Posted by johanson let, 15 hits, 30 comment</h5>
+								</div>
+							</div>
+							<div class="sl-item">
+								<div class="box-img">
+									<div class="sl-img">
 										<a href="#">
-											<h3>Lorem Ipsum has been the industry's standard dummy text</h3>
+											<img src="images/slide/blog/img-2.jpg" alt="">
 										</a>
-										<br>
-										<h5>Posted by johanson let, 15 hits, 30 comment</h5>
 									</div>
+								</div>
+								<div class="box-text">
+									<h6>25 january 2018</h6>
+									<a href="#">
+										<h3>Lorem Ipsum has been the industry's standard dummy text</h3>
+									</a>
+									<br>
+									<h5>Posted by johanson let, 15 hits, 30 comment</h5>
+								</div>
+							</div>
+							<div class="sl-item">
+								<div class="box-img">
+									<div class="sl-img">
+										<a href="#">
+											<img src="images/slide/blog/img-3.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="box-text">
+									<h6>28 december 2017</h6>
+									<a href="#">
+										<h3>Lorem Ipsum has been the industry's standard dummy text</h3>
+									</a>
+									<br>
+									<h5>Posted by johanson let, 15 hits, 30 comment</h5>
+								</div>
+							</div>
+							<div class="sl-item">
+								<div class="box-img">
+									<div class="sl-img">
+										<a href="#">
+											<img src="images/slide/blog/img-1.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="box-text">
+									<h6>15 jun 2016</h6>
+									<a href="#">
+										<h3>Lorem Ipsum has been the industry's standard dummy text</h3>
+									</a>
+									<br>
+									<h5>Posted by johanson let, 15 hits, 30 comment</h5>
+								</div>
+							</div>
+							<div class="sl-item">
+								<div class="box-img">
+									<div class="sl-img">
+										<a href="#">
+											<img src="images/slide/blog/img-2.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="box-text">
+									<h6>25 january 2018</h6>
+									<a href="#">
+										<h3>Lorem Ipsum has been the industry's standard dummy text</h3>
+									</a>
+									<br>
+									<h5>Posted by johanson let, 15 hits, 30 comment</h5>
+								</div>
+							</div>
+							<div class="sl-item">
+								<div class="box-img">
+									<div class="sl-img">
+										<a href="#">
+											<img src="images/slide/blog/img-2.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="box-text">
+									<h6>25 january 2018</h6>
+									<a href="#">
+										<h3>Lorem Ipsum has been the industry's standard dummy text</h3>
+									</a>
+									<br>
+									<h5>Posted by johanson let, 15 hits, 30 comment</h5>
+								</div>
+							</div>
+							<div class="sl-item">
+								<div class="box-img">
+									<div class="sl-img">
+										<a href="#">
+											<img src="images/slide/blog/img-3.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="box-text">
+									<h6>28 december 2017</h6>
+									<a href="#">
+										<h3>Lorem Ipsum has been the industry's standard dummy text</h3>
+									</a>
+									<br>
+									<h5>Posted by johanson let, 15 hits, 30 comment</h5>
 								</div>
 							</div>
 						</div>
-					</div>
 					</div>
 				</div>
 			</div>
@@ -410,81 +462,71 @@
 		<section id="price" class="price">
 			<div class="container">
 				<div class="row">
-					<div class="price-carousel">
-						<div class="owl-stage-outer">
-							<div class="owl-stage">
-								<div class="owl-item">
-									<div class="price-item">
-										<div class="price-block">
-											<div class="price-type">
-												<h2>BASIC</h2>
-											</div>
-											<div class="price-package">
-												<h6 class="user-type">ONLY THE BASIC FEATURES</h6>
-												<div class="divide"></div>
-												<h2>$969</h2>
-												<h6 class="price-year">PER YEAR</h6>
-												<div class="divide"></div>
-											</div>
-											<ul class="feature">
-												<li>1 GB of space</li>
-												<li>real time sync</li>
-												<li>unlimited attachment</li>
-												<li>customize theme</li>
-												<li>priority email support</li>
-											</ul>
-											<a href="#" class="btn btn-custom">SELECT PLANE</a>
-										</div>
-									</div>
+					<div class="price-carousel owl-carousel">
+						<div class="price-item">
+							<div class="price-block">
+								<div class="price-type">
+									<h2>BASIC</h2>
 								</div>
-								<div class="owl-item">
-									<div class="price-item">
-										<div class="price-block">
-											<div class="price-type">
-												<h2>STANDART</h2>
-											</div>
-											<div class="price-package">
-												<h6 class="user-type">TAKE IT TO THE NEXT LEVEL</h6>
-												<div class="divide"></div>
-												<h2>$969</h2>
-												<h6 class="price-year">PER YEAR</h6>
-												<div class="divide"></div>
-											</div>
-											<ul class="feature">
-												<li>1 GB of space</li>
-												<li>real time sync</li>
-												<li>unlimited attachment</li>
-												<li>customize theme</li>
-												<li>priority email support</li>
-											</ul>
-											<a href="#" class="btn btn-custom">SELECT PLANE</a>
-										</div>
-									</div>
+								<div class="price-package">
+									<h6 class="user-type">ONLY THE BASIC FEATURES</h6>
+									<div class="divide"></div>
+									<h2>$969</h2>
+									<h6 class="price-year">PER YEAR</h6>
+									<div class="divide"></div>
 								</div>
-								<div class="owl-item">
-									<div class="price-item">
-										<div class="price-block">
-											<div class="price-type">
-												<h2>CUSTOM</h2>
-											</div>
-											<div class="price-package">
-												<h6 class="user-type">OUR BIGGET PLAN</h6>
-												<div class="divide"></div>
-												<h2>$969</h2>
-												<h6 class="price-year">PER YEAR</h6>
-												<div class="divide"></div>
-											</div>
-											<ul class="feature">
-												<li>1 GB of space</li>
-												<li>real time sync</li>
-												<li>unlimited attachment</li>
-												<li>customize theme</li>
-												<li>priority email support</li>
-											</ul>
-											<a href="#" class="btn btn-custom">SELECT PLANE</a>
-										</div>
-									</div>
+								<ul class="feature">
+									<li>1 GB of space</li>
+									<li>real time sync</li>
+									<li>unlimited attachment</li>
+									<li>customize theme</li>
+									<li>priority email support</li>
+								</ul>
+								<a href="#" class="btn btn-custom">SELECT PLANE</a>
+							</div>
+						</div>
+						<div class="price-item">
+							<div class="price-block">
+								<div class="price-type">
+									<h2>STANDART</h2>
 								</div>
+								<div class="price-package">
+									<h6 class="user-type">TAKE IT TO THE NEXT LEVEL</h6>
+									<div class="divide"></div>
+									<h2>$969</h2>
+									<h6 class="price-year">PER YEAR</h6>
+									<div class="divide"></div>
+								</div>
+								<ul class="feature">
+									<li>1 GB of space</li>
+									<li>real time sync</li>
+									<li>unlimited attachment</li>
+									<li>customize theme</li>
+									<li>priority email support</li>
+								</ul>
+								<a href="#" class="btn btn-custom">SELECT PLANE</a>
+							</div>
+						</div>
+						<div class="price-item">
+							<div class="price-block">
+								<div class="price-type">
+									<h2>CUSTOM</h2>
+								</div>
+								<div class="price-package">
+									<h6 class="user-type">OUR BIGGET PLAN</h6>
+									<div class="divide"></div>
+									<h2>$969</h2>
+									<h6 class="price-year">PER YEAR</h6>
+									<div class="divide"></div>
+								</div>
+								<ul class="feature">
+									<li>1 GB of space</li>
+									<li>real time sync</li>
+									<li>unlimited attachment</li>
+									<li>customize theme</li>
+									<li>priority email support</li>
+								</ul>
+								<a href="#" class="btn btn-custom">SELECT PLANE</a>
 							</div>
 						</div>
 					</div>
@@ -588,5 +630,25 @@
 		<p>2018-19 copyright by themeforest powered by pixel strap</p>
 	</footer>
 	<!-- End Footer -->
+	<!-- Tap To Top -->
+	<div class="tap-top">
+		<i class="fa fa-angle-double-up"></i>
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+
+	<!-- Owl Carousel -->
+	<script src="libs/owl.carousel.min.js"></script>
+
+
+	<script src="JavaScript/main.js"></script>
+
+
+
 </body>
 </html>
