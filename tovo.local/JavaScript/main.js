@@ -51,6 +51,8 @@ $(document).ready(function () {
     dots: true,
     margin: 20,
     loop: true,
+    autoplay: true,
+    autoplayTimeout: 10000,
     responsive: {
       0: {
         items: 1
@@ -73,6 +75,8 @@ $(document).ready(function () {
   $(".price-carousel").owlCarousel({
     margin: 10,
     loop: true,
+    autoplay: true, 
+    autoplayTimeout: 8000,
     responsive: {
       0: {
         items: 1
@@ -98,6 +102,7 @@ $(document).ready(function () {
     margin: 30,
     loop: true,
     center: true,
+    autoplay: true,
     responsive: {
       0: {
         items: 2,

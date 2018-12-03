@@ -221,6 +221,26 @@
         }
       }
     }
+
+    .contact {
+      .row {
+        .cont-form {
+          width: 100%;
+        }
+        .cont-img {
+          display: none;
+        }
+      }
+    }
+
+    .sub {
+      .row {
+
+        p {
+          font-size: 0.85rem;
+        }
+      }
+    }
   }
 }
 
@@ -352,12 +372,37 @@
     .price {
       .price-item {
         .price-block {
+          padding: 30px;
           .btn {
-            width: 60%;
+            width: auto;
           }
         }
       }
     }
+
+    .contact {
+      .contact-circle1,
+      .contact-circle2 {
+        animation: none;
+      }
+      .row {
+        .cont-form {
+          h2 {
+            line-height: 1.5rem;
+          }
+          form {
+            margin-top: 15px;
+            input,
+            textarea {
+              width: 100%;
+              box-shadow: 0px 0px 5px #18e7d3;
+            }
+          }
+        }
+      }
+    }
+
+
 
   }
   
@@ -413,6 +458,18 @@
           border: 2px solid #ddd;
           border-radius: 10px;
           overflow: hidden;
+        }
+      }
+    }
+
+    .sub {
+      .row {
+        h2 {
+          line-height: 1.8rem;
+          text-align: center;
+        }
+        .footer-form {
+          width: 100%;
         }
       }
     }

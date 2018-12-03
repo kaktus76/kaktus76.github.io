@@ -152,6 +152,15 @@
   .main .price .price-item .price-block .btn {
     padding: 10px 25px;
   }
+  .main .contact .row .cont-form {
+    width: 100%;
+  }
+  .main .contact .row .cont-img {
+    display: none;
+  }
+  .main .sub .row p {
+    font-size: 0.85rem;
+  }
 }
 @media (max-width: 768px) {
   .container {
@@ -251,8 +260,26 @@
   .main .screenshot .screenshot-box .mobile-light-right {
     display: none;
   }
+  .main .price .price-item .price-block {
+    padding: 30px;
+  }
   .main .price .price-item .price-block .btn {
-    width: 60%;
+    width: auto;
+  }
+  .main .contact .contact-circle1,
+  .main .contact .contact-circle2 {
+    animation: none;
+  }
+  .main .contact .row .cont-form h2 {
+    line-height: 1.5rem;
+  }
+  .main .contact .row .cont-form form {
+    margin-top: 15px;
+  }
+  .main .contact .row .cont-form form input,
+  .main .contact .row .cont-form form textarea {
+    width: 100%;
+    box-shadow: 0px 0px 5px #18e7d3;
   }
 }
 @media (max-width: 576px) {
@@ -290,6 +317,13 @@
     border: 2px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
+  }
+  .main .sub .row h2 {
+    line-height: 1.8rem;
+    text-align: center;
+  }
+  .main .sub .row .footer-form {
+    width: 100%;
   }
 }
 @media (max-width: 357px) {
