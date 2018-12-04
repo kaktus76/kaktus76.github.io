@@ -33,6 +33,42 @@ $(function () {
 });
 
 
+/* SCROLL MENU */
+
+var menu_selector = ".navbar-box"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
+function onScroll() {
+  var scroll_top = $(document).scrollTop();
+  $(menu_selector + " a").each(function () {
+    var hash = $(this).attr("href");
+    var target = $(hash);
+    if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
+      $(menu_selector + " a.active").removeClass("active");
+      $(this).addClass("active");
+    } else {
+      $(this).removeClass("active");
+    }
+  });
+}
+$(document).ready(function () {
+  $(document).on("scroll", onScroll);
+  $("a[href^=#]").click(function (e) {
+    e.preventDefault();
+    $(document).off("scroll");
+    $(menu_selector + " a.active").removeClass("active");
+    $(this).addClass("active");
+    var hash = $(this).attr("href");
+    var target = $(hash);
+    $("html, body").animate({
+      scrollTop: target.offset().top
+    }, 500, function () {
+      window.location.hash = hash;
+      $(document).on("scroll", onScroll);
+    });
+  });
+});
+/*END SCROLL MENU */
+
+
 $('.about, .home, .features, .screenshot, .team, .blog, .price, .contact').on('click', function () {
   var el = $(this);
   var dest = el.attr('href'); // получаем направление
@@ -45,6 +81,8 @@ $('.about, .home, .features, .screenshot, .team, .blog, .price, .contact').on('c
   return false;
 });
 
+
+/* OWL CAROUSEL */
 $(document).ready(function () {
   $(".blog-carousel").owlCarousel({
     // autoWidth: true,
