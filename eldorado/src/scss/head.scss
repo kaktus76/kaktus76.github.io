@@ -1,0 +1,109 @@
+.header {
+    position: relative;
+    background: $white;
+    border: none;
+    overflow: hidden;
+    transition: background 0.4s ease-in-out;
+
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.4s, opacity 0.2s;
+    }
+
+    &.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transition: transform 0.4s, opacity 0.2s;
+    }
+
+    &.fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 30 !important;
+    }
+
+    &__top {
+        padding: 8px 15px;
+    }
+
+    &__link {
+        display: inline-block;
+        position: relative;
+        width: 198px;
+        height: 54px;
+        cursor: default;
+        margin: 0 30px 0 15px;
+
+        &::after {
+            content: "";
+        }
+
+        @media all and (max-width: 719px) {
+            margin: 0 15px 0 0;
+        }
+    }
+
+    &__img {
+        width: 198px;
+        height: 54px;
+    }
+
+    &__course-name {
+        font-size: $fs22;
+        line-height: $lh30;
+        color: $red;
+    }
+
+    &__slide-name {
+        font-size: $fs10;
+        line-height: $lh14;
+        color: rgba($red, 0.75);
+        padding: 5px 0px;
+    }
+
+    &__wrapper {
+        width: 100%;
+        background: $white;
+
+        &-main {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba($white, 0.35);
+        }
+
+        &-progress {
+            position: relative;
+            width: 100%;
+            height: 3px;
+            left: 0px;
+            background: $white;
+        }
+    }
+
+    &-icon-menu {
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        padding: 8px 4px;
+        margin-left: auto;
+
+        &__item {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: $red;
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        &:hover .header-icon-menu__item {
+            background: rgba($red, 0.75);
+        }
+    }
+}

@@ -1,0 +1,168 @@
+.switch {
+
+    &__large {
+        position: relative;
+        display: inline-block;
+        width: 65px;
+        height: 40px;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            &:checked {
+                & + .switch-fill{
+                    background-color: $gray;
+
+                        &:before {
+                            transform: translateX(25px);
+                        }
+                }
+            }
+        }
+
+        &.switch-fill {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid $gray;
+            background-color: $gray;
+            transition: .4s;
+
+            &.round {
+                border-radius: 34px;
+
+                &:before {
+                    border-radius: 50%;
+                }
+            }
+
+            &:before {
+                position: absolute;
+                content: "";
+                height: 34px;
+                width: 34px;
+                left: 3px;
+                bottom: 2px;
+                background-color:$white;
+                transition: .4s;
+            }
+        }
+    }
+
+    &__medium {
+        position: relative;
+        display: inline-block;
+        width: 65px;
+        height: 40px;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            &:checked {
+                & + .switch-fill{
+                    background-color: $gray;
+
+                        &:before {
+                            transform: translateX(25px);
+                        }
+                }
+            }
+        }
+
+        &.switch-fill {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid $gray;
+            background-color: $gray;
+            transition: .4s;
+
+            &.round {
+                border-radius: 34px;
+
+                &:before {
+                    border-radius: 50%;
+                }
+            }
+
+            &:before {
+                position: absolute;
+                content: "";
+                height: 34px;
+                width: 34px;
+                left: 3px;
+                bottom: 2px;
+                background-color:$white;
+                transition: .4s;
+            }
+        }
+    }
+
+    &__small {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        height: 24px;
+
+        & + div {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            &:checked {
+                & + .switch-fill{
+                    background-color: $gray;
+
+                        &:before {
+                            transform: translateX(15px);
+                        }
+                }
+            }
+        }
+
+        &.switch-fill {
+            display: inline-block;
+            width: 40px;
+            cursor: pointer;
+            border: 1px solid $gray;
+            background-color: $gray;
+            transition: .4s;
+
+            
+
+            &.round {
+                border-radius: 12px;
+
+                &:before {
+                    border-radius: 50%;
+                }
+            }
+
+            &:before {
+                position: absolute;
+                content: "";
+                height: 16px;
+                width: 16px;
+                left: 4px;
+                bottom: 3px;
+                background-color:$white;
+                transition: .4s;
+            }
+        }
+    }
+}

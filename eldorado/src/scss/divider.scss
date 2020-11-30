@@ -1,0 +1,50 @@
+.divider {
+    &__img-rounded {
+        display: flex;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        background: transparent;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    &__circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33px;
+        height: 33px;
+        max-width: 33px;
+        max-height: 33px;
+        background: $red;
+        color: $white;
+        font-size: $fs14;
+        line-height: $lh21;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    &__line {
+        height: 1px;
+        background: rgba($black, 0.10);
+        margin: 20px 0;
+
+        &--item {
+            margin: 0 0 20px 0;
+            color: #000;
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-image: linear-gradient(to left, rgba($black, 0.10) 80%, $black 20%) 1 1;
+        }
+    }
+
+    &__row-wrap {
+        display: flex;
+        align-items:center;
+
+        & .divider__img-rounded {
+            margin: 0 22px 0 0;
+        }
+    }
+}

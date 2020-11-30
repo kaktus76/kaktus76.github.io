@@ -1,0 +1,43 @@
+
+.border {
+    border: 1px solid $gray !important;
+
+    &-top {
+        border-top: 1px solid transparent;
+    }
+    &-right {
+        border-right: 1px solid transparent;
+    }
+
+    &-bottom {
+        border-bottom: 1px solid transparent;
+    }
+
+    &-left {
+        border-left: 1px solid transparent;
+    }
+
+    &-gray {
+        border-color: rgba($black, 0.30) !important;
+    }
+
+    &-light-gray {
+        border-color: rgba($black, 0.10) !important;
+    }
+
+    &-red {
+        border-color: $red !important;
+    }
+
+    &-light-red {
+        border-color: rgba($red, 0.30) !important;
+    }
+
+    &-blue {
+        border-color: $blue !important;
+    }
+
+    &-light-blue {
+        border-color: rgba($blue, 0.10) !important;
+    }
+}

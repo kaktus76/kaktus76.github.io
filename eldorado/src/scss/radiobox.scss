@@ -1,0 +1,213 @@
+//radiobox
+.radiobox {
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &.l {
+        &__item {
+            position: relative;
+            margin: 0 0 40px 0;
+        }
+
+        &__label {
+            cursor: pointer;
+            position: relative;
+            left: 15px;
+            top: 12px;
+
+            &:before {
+                content: '';
+                float: left;
+                width: 40px;
+                height: 40px;
+                background-color: $white;
+                border: 1px solid rgba($blue, 100);
+                margin-top: 0;
+                border-radius: 100%;
+            }
+
+            &:hover:before {
+                border: 1px solid rgba($blue, 50);
+            }
+        }
+
+        &:checked+.radiobox.l__label:hover:before {
+            background-color: $white;
+            border: 9px solid rgba($blue, 75);
+        }
+
+        &:checked+.radiobox.l__label:before {
+            background-color: $white;
+            border: 9px solid $blue;
+        }
+
+        &.radiobox.l[type="radio"][disabled]+label:before {
+            content: '';
+            background-color: rgba($blue, 20);
+            border: px solid rgba($blue, 0);
+        }
+    }
+
+    &.m {
+        &__item {
+            position: relative;
+            margin: 0 0 32px 0;
+        }
+
+        &__label {
+            cursor: pointer;
+            position: relative;
+            left: 15px;
+            top: 8px;
+
+            &:before {
+                content: '';
+                float: left;
+                width: 32px;
+                height: 32px;
+                background-color: $white;
+                border: 1px solid rgba($blue, 100);
+                margin-top: 0;
+                border-radius: 100%;
+            }
+
+            &:hover:before {
+                border: 1px solid rgba($blue, 50);
+            }
+        }
+
+        &:checked+.radiobox.m__label:hover:before {
+            background-color: $white;
+            border: 7px solid rgba($blue, 75);
+        }
+
+        &:checked+.radiobox.m__label:before {
+            background-color: $white;
+            border: 7px solid $blue;
+        }
+
+        &.radiobox.m[type="radio"][disabled]+label:before {
+            content: '';
+            background-color: rgba($blue, 20);
+            border: 1px solid rgba($blue, 0);
+        }
+    }
+
+    &.s {
+        &__item {
+            position: relative;
+            margin: 0;
+        }
+
+        &__label {
+            cursor: pointer;
+            display: block;
+            position: relative;
+            top: 0px;
+            padding: 15px 0 15px 40px;
+
+            &:before {
+                content: '';
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                left: 0px;
+                background-color: rgba($white, 0.15);
+                border: 1px solid $blue;
+                margin-top: 0;
+                border-radius: 100%;
+            }
+
+            &:hover:before {
+                border: 1px solid rgba($blue, 0.50);
+            }
+
+            &.bg-green {
+                color: $green;
+
+                &:before {
+                    background: rgba($green, 0.20);
+                }
+            }
+
+            &.bg-red {
+                color: $red;
+
+                &:before {
+                    background: rgba($red, 0.20);
+                }
+            }
+
+            &.border-green {
+                &:before {
+                    border-color: $green;
+                }
+            }
+
+            &.border-red {
+                &:before {
+                    border-color: $red;
+                }
+            }
+        }
+
+        &__feedback-correct {
+            position: relative;
+            top: 10px;
+            left: 15px;
+            display: block;
+        }
+
+        &:checked+.radiobox.s__label {
+            &.s__label:hover:before {
+                background-color: $white;
+                border: 7px solid rgba($blue, 0.75);
+            }
+
+            &.bg-red:hover:before {
+                background-color: $white;
+                border: 7px solid rgba($red, 0.75);
+            }
+
+            &.bg-green:hover:before {
+                background-color: $white;
+                border: 7px solid rgba($green, 0.75);
+            }
+
+        }
+
+        &:checked+.radiobox.s__label {
+            &:before {
+                background-color: $white;
+                border: 7px solid $blue;
+            }
+
+            &.bg-red:before {
+                background-color: $white;
+                border: 7px solid $red;
+            }
+
+            &.bg-green:before {
+                background-color: $white;
+                border: 7px solid $green;
+            }
+        }
+
+        &.radiobox.s[type="radio"][disabled]+label {
+            // color: rgba($black, 0.20);
+            pointer-events: none;
+        }
+
+        &.radiobox.s[type="radio"][disabled]+label:before {
+            content: '';
+        }
+
+        &.radiobox.s[type="radio"][disabled]+label:before:hover {
+            content: '';
+        }
+
+
+    }
+}

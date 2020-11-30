@@ -1,0 +1,427 @@
+/* Speach */
+.speech {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background: $white;
+    padding: 20px;
+    color: $black;
+    font-size: 14px;
+    line-height: 21px;
+    box-shadow: 0px 4px 10px rgba($black, 0.10);
+    border: 1px solid $speech-border-color;
+    border-radius: 5px;
+
+    &.top__left,
+    &.top__center,
+    &.top__right {
+        margin-top: 16px;
+    }
+
+    &.right__top,
+    &.right__middle,
+    &.right__bottom {
+        
+    }
+
+    &.bottom__left,
+    &.bottom__center,
+    &.bottom__right {
+        margin-bottom: 16px;
+    }
+
+    &.left__top,
+    &.left__middle,
+    &.left__bottom {
+        margin-left: 16px;
+    }
+
+    &.left__top {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-right-color: $speech-tail-color;
+            border-left: 0;
+            margin-left: -16px;
+            margin-top: 16px;
+        }
+
+        &.up {
+            &::after {
+                border-top: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &.left__middle {
+        position: relative;
+        width: calc(100% - 16px);
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-right-color: $speech-tail-color;
+            border-left: 0;
+            margin-left: -16px;
+            margin-top: -8px;
+
+            @media (max-width: 719px) {
+                left: 34px;
+                border-left: 16px;
+                top: 100%;
+                margin-top: 0px;
+            }
+        }
+
+        &.up {
+            &::after {
+                border-top: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-bottom: 0;
+            }
+        }
+
+        @media (max-width: 719px) {
+            width: 100%;
+            margin-left: 0px;
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &.left__bottom {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-right-color: $speech-tail-color;
+            border-left: 0;
+            margin-left: -16px;
+            margin-bottom: 16px;
+        }
+
+        &.up {
+            &::after {
+                border-top: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &.top__left {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-bottom-color: $speech-tail-color;
+            border-top: 0;
+            margin-top: -16px;
+        }
+
+        &.up {
+            &::after {
+                border-top: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &.top__center {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-bottom-color: $speech-tail-color;
+            border-top: 0;
+            margin-top: -16px;
+        }
+
+        &.up {
+            &::after {
+                border-left: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-right: 0;
+            }
+        }
+    }
+
+    .top__right {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-bottom-color: $speech-tail-color;
+            border-top: 0;
+            margin-top: -16px;
+        }
+
+        &.up {
+            &::after {
+                border-left: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-right: 0;
+            }
+        }
+    }
+
+    &.right__top {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-left-color: $speech-tail-color;
+            border-right: 0;
+            margin-right: -16px;
+            margin-top: 16px;
+        }
+
+        &.up {
+            &::after {
+                border-top: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &.right__middle {
+        position: relative;
+        width: calc(100% - 16px);
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-left-color: $speech-tail-color;
+            border-right: 0;
+            margin-right: -16px;
+            margin-top: -8px;
+        }
+
+        &.up {
+            &::after {
+                border-top: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-bottom: 0;
+            }
+        }
+
+        @media all and (max-width: 719px) {
+            width: 100%;
+            margin-bottom: 20px;
+
+            &::after {
+                bottom: 3px;
+                margin-bottom: -21px;
+                border-top: 16px solid rgba($black, 0.20) !important;
+                right: 34px;
+                border-right: 16px solid transparent;
+                border-left: 0px solid transparent;
+                top: 100%;
+                margin-top: 0;
+            }
+        }
+    }
+
+
+
+    &.right__bottom {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-left-color: $speech-tail-color;
+            border-right: 0;
+            margin-right: -16px;
+            margin-bottom: 16px;
+        }
+
+        &.up {
+            &::after {
+                border-top: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &.bottom__left {
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-top-color: $speech-tail-color;
+            border-bottom: 0;
+            margin-bottom: -16px;
+        }
+
+        &.up {
+            &::after {
+                border-left: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-right: 0;
+            }
+        }
+    }
+
+    &.bottom__center {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-top-color: $speech-tail-color;
+            border-bottom: 0;
+            margin-bottom: -16px;
+        }
+
+        &.up {
+            &::after {
+                border-left: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-right: 0;
+            }
+        }
+    }
+
+    &.bottom__right {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border: 16px solid transparent;
+            border-top-color: $speech-tail-color;
+            border-bottom: 0;
+            margin-bottom: -16px;
+
+        }
+
+        &.up {
+            &::after {
+                border-left: 0;
+            }
+        }
+
+        &.down {
+            &::after {
+                border-right: 0;
+            }
+        }
+    }
+}

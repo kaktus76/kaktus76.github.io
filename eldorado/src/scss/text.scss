@@ -1,0 +1,126 @@
+/* Стили текста */
+.text {
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    &__xxl {
+        font-size: $fs22;
+        line-height: $lh30;
+
+        @media (max-width: 719px) {
+            font-size: $fs18;
+            line-height: $lh27;
+        }
+    }
+
+
+    &__xl {
+        font-size: $fs18;
+        line-height: $lh27;
+
+        @media (max-width: 719px) {
+            font-size: $fs16;
+            line-height: $lh24;
+        }
+    }
+
+
+    &__l {
+        font-size: $fs16;
+        line-height: $lh24;
+
+        @media (max-width: 719px) {
+            font-size: $fs14;
+            line-height: $lh21;
+        }
+    }
+
+
+    &__m {
+        font-size: $fs14;
+        line-height: $lh21;
+
+        @media (max-width: 719px) {
+            font-size: $fs12;
+            line-height: $lh17;
+        }
+    }
+
+
+    &__s {
+        font-size: $fs12;
+        line-height: $lh17;
+
+        @media (max-width: 719px) {
+            font-size: $fs10;
+            line-height: $lh14;
+        }
+    }
+
+
+    &__xs {
+        font-size: $fs10;
+        line-height: $lh14;
+    }
+
+    &-nowrap {
+        white-space: nowrap;
+    }
+
+    &-bold {
+        font-family: $Bold;
+    }
+
+    &-lighter {
+        font-family: $Light;
+    }
+
+    &-bold {
+        font-family: $Bold;
+    }
+
+    &-uppercase {
+        text-transform: uppercase;
+    }
+
+    &-orange {
+        color: $orange;
+    }
+
+    &-red {
+        color: $red;
+    }
+
+    &-light-gray {
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    &-gray {
+        color: $gray;
+    }
+
+    &-green {
+        color: #69B83C;
+    }
+
+    &-ls-1 {
+        letter-spacing: 1px;
+    }
+
+    &-ls-2 {
+        letter-spacing: 2px;
+    }
+
+    &-ls-3 {
+        letter-spacing: 3px;
+    }
+
+    &-ls-4 {
+        letter-spacing: 4px;
+    }
+
+    &-ls-5 {
+        letter-spacing: 5px;
+    }
+}

@@ -1,0 +1,37 @@
+.table{
+    display: table;
+    width: 100%;
+    border-spacing:0;
+    border-collapse: collapse;
+    position: relative;
+    z-index: 1;
+
+    &__row{
+        display: table-row;
+
+        &:first-child > .table__cell {
+            padding-top: 0px;
+            padding-bottom: 10px;
+        }
+
+        &:last-child > .table__cell {
+            padding-bottom: 0px;
+        }
+    }
+
+    &__cell{
+        padding: 15px 20px 15px 0;
+        display: table-cell;
+        font-size: $fs14;
+        line-height: $lh21;
+        font-family: $Regular;
+
+        &:last-child {
+            padding-right: 0px;
+        }
+
+        @media screen and (max-width: 719px) {
+            padding: 15px 10px 15px 0;
+        }
+    }
+}

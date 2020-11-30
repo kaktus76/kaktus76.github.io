@@ -1,0 +1,298 @@
+span.ripple {
+    position: absolute; /* The absolute position we mentioned earlier */
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 600ms linear;
+    background-color: rgba($white, 0.85);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.btn {
+    // transition: all .3s;
+
+    &__primary {
+        &:not(:disabled):not(.disabled) {
+            cursor: pointer;
+        }
+
+        &,
+        &:visited,
+        &:focus,
+        &:active {
+            position: relative;
+            overflow: hidden;
+            transition: background 400ms;
+            display: inline-block;
+            width: auto;
+            border: none;
+            border-radius: 10px;
+            white-space: nowrap;
+            vertical-align: middle;
+            outline: none;
+            text-decoration: none;
+            background: $red;
+            color: $white;
+
+            &.large {
+                padding: 28px 40px;
+                font-size: $fs16;
+                line-height: $lh24;
+
+                @media only screen and (max-width: 719px) {
+                    padding: 12px 22px;
+                    font-size: $fs12;
+                    line-height: $lh17;
+                }
+            }
+
+            &.medium {
+                padding: 20px 35px;
+                font-size: $fs14;
+                line-height: $lh21;
+            }
+
+            &.small {
+                padding: 12px 22px;
+                font-size: $fs12;
+                line-height: $lh17;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+            background: transparent;
+            background-color: rgba($red, 0.85);
+            color: $white;
+        }
+    }
+
+    &__default {
+        &:not(:disabled):not(.disabled) {
+            cursor: pointer;
+        }
+
+        &,
+        &:visited,
+        &:focus,
+        &:active {
+            display: inline-block;
+            width: auto;
+            border: none;
+            white-space: nowrap;
+            vertical-align: middle;
+            outline: none;
+            background: $white;
+            border: 1px solid transparent;
+            color: $gray;
+            border-color: $gray;
+
+            &.large {
+                padding: 28px 40px;
+                font-size: $fs16;
+                line-height: $lh24;
+
+                @media only screen and (max-width: 719px) {
+                    padding: 12px 22px;
+                    font-size: $fs12;
+                    line-height: $lh17;
+                }
+            }
+
+            &.medium {
+                padding: 20px 35px;
+                font-size: $fs14;
+                line-height: $lh21;
+            }
+
+            &.small {
+                padding: 12px 22px;
+                font-size: $fs12;
+                line-height: $lh17;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+            background: transparent;
+            border-color: $red;
+            color: $red;
+        }
+
+    }
+
+    &__outline {
+        &:not(:disabled):not(.disabled) {
+            cursor: pointer;
+        }
+
+        &,
+        &:visited,
+        &:focus,
+        &:active {
+            display: inline-block;
+            width: auto;
+            white-space: nowrap;
+            vertical-align: middle;
+            outline: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            color: $red;
+            border-color: rgba($red, 75);
+
+            &.large {
+                padding: 28px 40px;
+                font-size: $fs16;
+                line-height: $lh24;
+
+                @media only screen and (max-width: 719px) {
+                    padding: 12px 22px;
+                    font-size: $fs12;
+                    line-height: $lh17;
+                }
+            }
+
+            &.medium {
+                padding: 20px 35px;
+                font-size: $fs14;
+                line-height: $lh21;
+            }
+
+            &.small {
+                padding: 12px 22px;
+                font-size: $fs12;
+                line-height: $lh17;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+            border-color: $red;
+            background-color: $red;
+            color: $white;
+        }
+    }
+
+    &__dashed {
+        &:not(:disabled):not(.disabled) {
+            cursor: pointer;
+        }
+
+        &,
+        &:visited,
+        &:focus,
+        &:active {
+            display: inline-block;
+            width: auto;
+            white-space: nowrap;
+            vertical-align: middle;
+            outline: none;
+            background-color: transparent;
+            border: 1px dashed transparent;
+            color: $gray;
+            border-color: $gray;
+
+            &.xxl {
+                padding: 30px 50px;
+                font-size: $fs16;
+                line-height: $lh24;
+            }
+
+            &.xl {
+                padding: 20px 40px;
+                font-size: $fs16;
+                line-height: $lh24;
+            }
+
+            &.l {
+                padding: 15px 30px;
+                font-size: $fs16;
+                line-height: $lh24;
+            }
+
+            &.m {
+                padding: 10px 25px;
+                font-size: $fs14;
+                line-height: $lh21;
+            }
+
+            &.s {
+                padding: 7px 20px;
+                font-size: $fs14;
+                line-height: $lh21;
+            }
+
+            &.xs {
+                padding: 5px 15px;
+                font-size: $fs12;
+                line-height: $lh17;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: $red;
+            border-color: $red;
+        }
+    }
+
+    &__circle {
+        border-radius: 50%;
+    }
+
+    &__round {
+        border-radius: 40px;
+    }
+
+    &__block {
+        display: block;
+        width: 100%;
+    }
+
+    &__center {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &>i,
+    &>span {
+        display: inline-block;
+        pointer-events: none;
+    }
+
+    &>.icon+span {
+        margin-left: 8px;
+    }
+
+    &.disabled {
+        color: rgba($black, 0.75);
+        background-color: rgba($black, 0.75);
+        border-color: rgba($black, 0.75);
+        text-shadow: none;
+        box-shadow: none;
+    }
+
+    &.btn__circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: $white;
+        border: 1px solid $red;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-right: -40px;
+
+        &:hover {
+            border: 1px solid rgba($red, 0.75);
+        }
+    }
+}

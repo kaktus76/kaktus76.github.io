@@ -1,0 +1,140 @@
+.pers {
+    position: relative;
+    height: 450px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+
+    &__1{
+        &--1{
+            background-image: url(../images/pers/1/pers__1--1.png);
+        }
+
+        &--2{
+            background-image: url(../images/pers/1/pers__1--2.png);
+        }
+
+        &--3{
+            background-image: url(../images/pers/1/pers__1--3.png);
+        }
+
+        &--4{
+            background-image: url(../images/pers/1/pers__1--4.png);
+        }
+
+        &--5{
+            background-image: url(../images/pers/1/pers__1--5.png);
+        }
+
+        &--6{
+            background-image: url(../images/pers/1/pers__1--6.png);
+        }
+
+        &--7{
+            background-image: url(../images/pers/1/pers__1--7.png);
+        }
+
+        &--8{
+            background-image: url(../images/pers/1/pers__1--8.png);
+        }
+
+        &--9{
+            background-image: url(../images/pers/1/pers__1--9.png);
+        }
+
+        &--10{
+            background-image: url(../images/pers/1/pers__1--10.png);
+        }
+
+        &--11{
+            background-image: url(../images/pers/1/pers__1--11.png);
+        }
+
+        &--12{
+            background-image: url(../images/pers/1/pers__1--12.png);
+        }
+
+        &--13{
+            background-image: url(../images/pers/1/pers__1--13.png);
+        }
+
+        &--14{
+            background-image: url(../images/pers/1/pers__1--14.png);
+        }
+
+        &--15{
+            background-image: url(../images/pers/1/pers__1--15.png);
+        }
+
+        &--16{
+            background-image: url(../images/pers/1/pers__1--16.png);
+        }
+
+        &--17{
+            background-image: url(../images/pers/1/pers__1--17.png);
+        }
+
+        &--18{
+            background-image: url(../images/pers/1/pers__1--18.png);
+        }
+    }
+
+    &__2{
+        &--1{
+            background-image: url(../images/pers/2/pers__2--1.png);
+        }
+
+        &--2{
+            background-image: url(../images/pers/2/pers__2--2.png);
+        }
+
+        &--3{
+            background-image: url(../images/pers/2/pers__2--3.png);
+        }
+
+        &--4{
+            background-image: url(../images/pers/2/pers__2--4.png);
+        }
+
+        &--5{
+            background-image: url(../images/pers/2/pers__2--5.png);
+        }
+
+        &--6{
+            background-image: url(../images/pers/2/pers__2--6.png);
+        }
+
+        &--7{
+            background-image: url(../images/pers/2/pers__2--7.png);
+        }
+
+        &--8{
+            background-image: url(../images/pers/2/pers__2--8.png);
+        }
+    }
+
+    &__circle {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        height: 142px;
+        width: 142px;
+    }
+
+    @media (max-width: 719px) {
+        height: 257px;
+    }
+}
+
+// .pers__circle {
+//     display: flex;
+//     justify-content: center;
+//     margin: 0 auto;
+//     height: 130px;
+//     width: 130px;
+
+//     @media (max-width: 719px) {
+//         margin: 0;
+//     }
+// }

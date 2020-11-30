@@ -1,0 +1,95 @@
+.fader {
+    position: fixed;
+    z-index: 55;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($black, 0.30);
+    opacity: 0;
+    transition: opacity .2s ease-out;
+    visibility: hidden;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    font-size: 16px;
+    background: #41464e;
+    color: $white;
+    height: 100vh;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    position: fixed;
+    z-index: 99;
+    width: 300px;
+    transition: transform .2s ease-in;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: 0 1px 3px rgba($black, 0.30);
+    transform: translate(-300px, 0);
+
+    &.show {
+        transform: translate(0, 0);
+    }
+
+    & .nav__main {
+        width: 300px;
+        overflow: visible;
+        z-index: 9;
+        transition: all .2s ease-out;
+
+        &--list {
+            flex: 1;
+            flex-grow: 1;
+        }
+
+        &--item {
+            white-space: nowrap;
+            display: block;
+            padding: 20px;
+
+            &_label {
+                font-family: $Bold;
+                color: inherit;
+                text-decoration: none;
+                display: block;
+                margin-bottom: 20px;
+                position: relative;
+                font-size: $fs30;
+                line-height: $lh40;
+            }
+        }
+
+        & .nav__sub {
+                display: block;
+
+                &--item {
+                    position: relative;
+                    font-size: $fs16;
+                    line-height: $lh24;
+
+                    a {
+                        color: $white;
+                        text-decoration: none !important;
+                        display: block;
+                        padding: 7px 0 9px 0;
+                        margin: 0;
+                        position: relative;
+                        white-space: normal;
+
+                        &:hover {
+                            color: rgba($white, 0.75)
+                        }
+                    }
+                }
+
+                &--list {}
+            }
+    }
+}

@@ -1,0 +1,47 @@
+.blockquote {
+    background-color: rgba($red, 0.10);
+    border-left: 1px solid $red;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: $Regular;
+
+    &__content {
+        width: 100%;
+        padding: 25px 15px;
+        word-wrap: anywhere;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $primary;
+        fill: $primary;
+        height: auto;
+        flex-shrink: 0;
+        font-size: 3em;
+        margin: 0 0 0 15px;
+        padding: 25px 0;
+
+        &.last {
+            margin: 0 15px 0 0;
+        }
+    }
+
+    &__title {
+        display: block;
+        font-family: $Bold;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-size: $fs16;
+        line-height: $lh24;
+    }
+
+    &--green {
+        border-left-color: $green;
+        background: rgba($green, 0.10);
+    }
+}

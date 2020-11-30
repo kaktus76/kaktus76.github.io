@@ -1,0 +1,128 @@
+/*accordion*/
+.lmm-accordion {
+
+    & &__wrapper {
+        position: relative;
+        width: 100%;
+
+        & &__item {
+            margin-bottom: 50px;
+
+            & i,
+            & input[type=checkbox] {
+                opacity: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    & &__content {
+        transition: all 0.3s;
+        position: relative;
+        opacity: 1;
+        transform: translate(0, 0);
+        z-index: -1;
+        padding: 30px 15px 20px 10px;
+        border-left: 5px solid $red;
+
+        p {
+            font-size: $fs16;
+            line-height: $lh24;
+            margin-bottom: 20px;
+
+            @media (max-width: 719px) {
+                font-size: $fs14;
+                line-height: $lh21;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    & &__item {
+        position: relative;
+        margin-bottom: 0px;
+        animation: all 0.1s;
+
+        & i {
+            opacity: 1;
+            position: absolute;
+            transform: translate(-6px, 0);
+            top: 25px;
+            right: 15px;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                right: 3px;
+                background: #D70E2A;
+                width: 1px;
+                height: 12px;
+                transition: all 0.25s ease-in-out;
+            }
+
+            &::before {
+                transform: translate(-4px, 0) rotate(45deg);
+            }
+
+            &::after {
+                transform: translate(4px, 0) rotate(-45deg);
+            }
+        }
+
+        & input[type=checkbox] {
+            position: absolute;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0;
+
+            &:checked~.lmm-accordion__content {
+                margin-top: 0;
+                max-height: 0;
+                opacity: 0;
+                padding: 0;
+                transition: none;
+            }
+
+            &:checked~i:before {
+                transform: translate(4px, 0) rotate(45deg);
+            }
+
+            &:checked~i:after {
+                transform: translate(-4px, 0) rotate(-45deg);
+            }
+
+            &:checked~.lmm-accordion__title {
+                border-top: 1px solid rgba($red, 0.10);
+                border-left: 5px solid transparent;
+            }
+        }
+    }
+
+    & &__title {
+        font-family: $Medium;
+        font-size: $fs16;
+        line-height: $lh24;
+        margin-bottom: 0px;
+        position: relative;
+        padding: 18px 40px 18px 10px;
+        border-top: 1px solid rgba($red, 0.10);
+        border-left: 5px solid transparent;
+        transition: all .3s;
+        border-top: 1px solid $red;
+        border-left: 5px solid $red;
+
+        @media (max-width: 719px) {
+            font-size: $fs14;
+            line-height: $lh21;
+        }
+    }
+}

@@ -1,0 +1,166 @@
+.tablet {
+    position: relative;
+    border: 10px solid #5E6C83;
+    background: #05142d;
+    box-sizing: border-box;
+    border-radius: 50px;
+    height: 1071px;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 25px;
+        left: 25px;
+        background: $black;
+        border: 10px solid $black;
+        border-radius: 50px;
+        z-index: -1;
+    }
+
+    &__title {
+        position: relative;
+        padding: 35px 85px 21px 255px;
+        font-size: 30px;
+        line-height: 40px;
+        font-family: $Bold;
+        background: $black;
+        text-transform: uppercase;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 19px;
+            background-image: url('../images/rect_bottom.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            bottom: -19px;
+            left: 0;
+
+        }
+    }
+
+    &__sidebar {
+        position: relative;
+        top: -35px;
+        width: 205px;
+        height: auto;
+        background: #264270;
+        display: flex;
+        flex-direction: column;
+
+        &--item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 15px;
+
+            &.active {
+                .tablet__sidebar--item_avatar {
+                    background: #264270;
+                    border: 2px solid #FF6200;
+                    background-image: url('../images/women_active.png');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                }
+            }
+
+            &.lock {
+                pointer-events: none;
+
+                .tablet__sidebar--item_avatar {
+                    background-image: url('../images/lock.png');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 20px 26px;
+                }
+
+                .tablet__sidebar--item_title {
+                    color: rgba($white, 0.50);
+                }
+            }
+
+            & &_avatar {
+                width: 80px;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                margin-bottom: 10px;
+                background: rgba($black, 0.50);
+                border: 2px solid transparent;
+                overflow: hidden;
+
+                img {
+                    display: inline-block;
+                    height: auto;
+                    max-width: 100%;
+                    image-rendering: optimizeSpeed;
+                } 
+            }
+
+            & &_title {
+                font-size: $fs14;
+                line-height: 21px;
+                color: $white;
+                text-align: center;
+            }
+
+            &:hover {
+                background:#959595;
+            }
+
+            &:first-child {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 25px;
+                    background-image: url('../images/sidebar_top_n.svg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    top: -25px;
+                    left: 0;
+                }
+    
+                &:hover {
+                    &::before {
+                        content: '';
+                        background-image: url('../images/sidebar_top_o.svg');
+                    }
+                }
+            }
+
+            &:last-child {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 25px;
+                    background-image: url('../images/sidebar_bottom_n.svg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    bottom: -25px;
+                    left: 0;
+                }
+    
+                &:hover {
+                    &::before {
+                        content: '';
+                        background-image: url('../images/sidebar_bottom_o.svg');
+                    }
+                }
+            }
+        }     
+    }
+}
+

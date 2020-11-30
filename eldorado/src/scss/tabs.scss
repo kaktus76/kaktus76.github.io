@@ -1,0 +1,106 @@
+.tabs {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 26px;
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    margin-bottom: 30px;
+
+    &-fixed-width {
+        display: flex;
+
+        & .tab {
+            flex-grow: 1;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        background: rgba($red, 0.20);
+    }
+
+    @media only screen and (max-width: 719px) {
+        display: flex;
+        margin-left: -15px;
+        margin-right: -15px;
+        width: calc(100% + 30px) !important;
+    }
+
+    &.tabs-transparent {
+        background-color: transparent;
+    }
+
+    & .indicator {
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background-color: $black;
+        will-change: left, right;
+    }
+
+    & .tabs-fixed-width {
+        display: flex;
+
+        & .tab {
+            flex-grow: 1;
+        }
+    }
+
+    & .tab {
+        display: inline-block;
+        text-align: left;
+        line-height: 26px;
+        height: 26px;
+        padding: 0;
+        margin: 0;
+
+        @media only screen and (max-width: 719px) {
+            flex-grow: 1;
+        }
+
+        a {
+            color: $black;
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-family: $Regular;
+            font-size: $fs14;
+            line-height: $lh21;
+            font-weight: 500;
+            padding: 0 10px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-align: center;
+            text-decoration: none;
+            transition: color .28s ease, background-color .28s ease;
+        }
+
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        a {
+            &:hover {
+                color: $red;
+            }
+
+            &.active {
+                color: $red;
+            }
+        }
+
+        .disabled {
+
+            a,
+            :hover {
+                color: rgba($red, 0.7);
+            }
+        }
+    }
+}

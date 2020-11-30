@@ -1,0 +1,218 @@
+//checkbox
+.checkbox {
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &.l {
+        &__item {
+            position: relative;
+            margin: 0 0 40px 0;
+        }
+
+        &__label {
+            cursor: pointer;
+            position: relative;
+            left: 15px;
+            top: 12px;
+
+            &:before {
+                content: '';
+                float: left;
+                width: 40px;
+                height: 40px;
+                background-color: rgba($black, 0.15);
+                /* border: 1px solid rgba($blue, 100); */
+                margin-top: 0;
+            }
+
+            &:hover:before {
+                border: 1px solid rgba($blue, 0.50);
+            }
+
+            &.active:before {
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAARCAMAAADub6yxAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAECAwQGB/gI+Qn6C/z9/vgcW5MwAAAFVJREFUeAGVzjsOgDAMg+E25QGlJL7/aVksoSQIqd78TX/JW44PLM3Qs4oBKkl1Tq39qQyh1hvASlWoeGUmvQPYqa9Tg29U70aNDpwe6Zcn+ghCr+4+nvUE+yZWUwQAAAAASUVORK5CYII=) no-repeat center center $blue;
+                border-color: $blue;
+            }
+        }
+
+        &:checked+.checkbox.l__label:hover:before {
+            background-color: $blue;
+            border-color: $blue;
+        }
+
+        &:checked+.checkbox.l__label:before {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAARCAMAAADub6yxAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAECAwQGB/gI+Qn6C/z9/vgcW5MwAAAFVJREFUeAGVzjsOgDAMg+E25QGlJL7/aVksoSQIqd78TX/JW44PLM3Qs4oBKkl1Tq39qQyh1hvASlWoeGUmvQPYqa9Tg29U70aNDpwe6Zcn+ghCr+4+nvUE+yZWUwQAAAAASUVORK5CYII=) no-repeat center center $blue;
+            border-color: $blue;
+        }
+
+        &.checkbox.l[type="checkbox"][disabled]+label:before {
+            content: '';
+            background-color: rgba($blue, 0.20);
+            border: 1px solid rgba($blue, 0);
+        }
+    }
+
+    &.m {
+        &__item {
+            position: relative;
+            margin: 0 0 32px 0;
+        }
+
+        &__label {
+            cursor: pointer;
+            position: relative;
+            left: 15px;
+            top: 8px;
+
+            &:before {
+                content: '';
+                float: left;
+                width: 32px;
+                height: 32px;
+                background-color: rgba($black, 0.15);
+                /* border: 1px solid rgba($blue, 100); */
+                margin-top: 0;
+            }
+
+            &:hover:before {
+                border: 1px solid rgba($blue, 0.50);
+            }
+
+            &.active:before {
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAARCAMAAADub6yxAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAECAwQGB/gI+Qn6C/z9/vgcW5MwAAAFVJREFUeAGVzjsOgDAMg+E25QGlJL7/aVksoSQIqd78TX/JW44PLM3Qs4oBKkl1Tq39qQyh1hvASlWoeGUmvQPYqa9Tg29U70aNDpwe6Zcn+ghCr+4+nvUE+yZWUwQAAAAASUVORK5CYII=) no-repeat center center $blue;
+                border-color: $blue;
+            }
+        }
+
+        &:checked+.checkbox.m__label:hover:before {
+            background-color: $blue;
+            border-color: $blue;
+        }
+
+        &:checked+.checkbox.m__label:before {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAARCAMAAADub6yxAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAECAwQGB/gI+Qn6C/z9/vgcW5MwAAAFVJREFUeAGVzjsOgDAMg+E25QGlJL7/aVksoSQIqd78TX/JW44PLM3Qs4oBKkl1Tq39qQyh1hvASlWoeGUmvQPYqa9Tg29U70aNDpwe6Zcn+ghCr+4+nvUE+yZWUwQAAAAASUVORK5CYII=) no-repeat center center $blue;
+            border-color: $blue;
+        }
+
+        &.checkbox.m[type="checkbox"][disabled]+label:before {
+            content: '';
+            background-color: rgba($blue, 0.20);
+            border: 1px solid rgba($blue, 0);
+        }
+    }
+
+    &.s {
+        &__item {
+            position: relative;
+        }
+
+        &__feedback-correct {
+            position: relative;
+            top: 10px;
+            left: 40px;
+            display: block;
+        }
+
+        &__label {
+            cursor: pointer;
+            position: relative;
+            padding: 15px 0 15px 40px;
+            top: 0px;
+            display: block;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0px;
+                float: left;
+                width: 25px;
+                height: 25px;
+                background-color: rgba($white, 0.15);
+                border: 1px solid $blue;
+                margin-top: 0;
+            }
+
+            &:hover:before {
+                border: 1px solid rgba($blue, 0.50);
+            }
+
+            &.bg-green {
+                color: $green;
+
+                &:before {
+                    background: rgba($green, 0.20);
+                }
+            }
+
+            &.bg-red {
+                color: $red;
+
+                &:before {
+                    background: rgba($red, 0.20);
+                }
+            }
+
+            &.border-green {
+                &:before {
+                    border-color: $green;
+                }
+            }
+
+            &.border-red {
+                &:before {
+                    border-color: $red;
+                }
+            }
+
+            &.active:before {
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAARCAMAAADub6yxAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAECAwQGB/gI+Qn6C/z9/vgcW5MwAAAFVJREFUeAGVzjsOgDAMg+E25QGlJL7/aVksoSQIqd78TX/JW44PLM3Qs4oBKkl1Tq39qQyh1hvASlWoeGUmvQPYqa9Tg29U70aNDpwe6Zcn+ghCr+4+nvUE+yZWUwQAAAAASUVORK5CYII=) no-repeat center center $blue;
+                border-color: $blue;
+            }
+        }
+
+        &:checked+.checkbox.s__label {
+            :hover:before {
+                background-color: $blue;
+                border-color: $blue;
+            }
+
+            &.bg-red:hover:before {
+                background-color: $red;
+                border-color: $red;
+            }
+
+            &.bg-green:hover:before {
+                background-color: $green;
+                border-color: $green;
+            }
+        }
+
+        &:checked+.checkbox.s__label {
+            &.s__label:before {
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAARCAMAAADub6yxAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAECAwQGB/gI+Qn6C/z9/vgcW5MwAAAFVJREFUeAGVzjsOgDAMg+E25QGlJL7/aVksoSQIqd78TX/JW44PLM3Qs4oBKkl1Tq39qQyh1hvASlWoeGUmvQPYqa9Tg29U70aNDpwe6Zcn+ghCr+4+nvUE+yZWUwQAAAAASUVORK5CYII=) no-repeat center center $blue;
+                border-color: $blue;
+            }
+
+            &.bg-red:before {
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAARCAMAAADub6yxAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAECAwQGB/gI+Qn6C/z9/vgcW5MwAAAFVJREFUeAGVzjsOgDAMg+E25QGlJL7/aVksoSQIqd78TX/JW44PLM3Qs4oBKkl1Tq39qQyh1hvASlWoeGUmvQPYqa9Tg29U70aNDpwe6Zcn+ghCr+4+nvUE+yZWUwQAAAAASUVORK5CYII=) no-repeat center center $blue;
+                background-color: $red;
+            }
+
+            &.bg-green:before {
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAARCAMAAADub6yxAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAECAwQGB/gI+Qn6C/z9/vgcW5MwAAAFVJREFUeAGVzjsOgDAMg+E25QGlJL7/aVksoSQIqd78TX/JW44PLM3Qs4oBKkl1Tq39qQyh1hvASlWoeGUmvQPYqa9Tg29U70aNDpwe6Zcn+ghCr+4+nvUE+yZWUwQAAAAASUVORK5CYII=) no-repeat center center $blue;
+                background-color: $green;
+            }
+        }
+
+        &.checkbox.s[type="checkbox"][disabled]+label {
+            // color: rgba($black, 0.20);
+            pointer-events: none;
+        }
+
+        &.checkbox.s[type="checkbox"][disabled]+label:before {
+            content: '';
+        }
+    }
+}

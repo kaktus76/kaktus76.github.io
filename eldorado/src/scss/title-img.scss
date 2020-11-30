@@ -1,0 +1,26 @@
+.title__img {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+
+    &:first-child {
+        margin-top: 100px;
+    }
+
+    img {
+        margin-bottom: 30px;
+        max-width: 200px;
+
+        @media (max-width: 719px) {
+            max-width: 150px;
+        }
+    }
+
+
+    div:first-child {
+        margin-bottom: 30px;
+    }
+
+
+}

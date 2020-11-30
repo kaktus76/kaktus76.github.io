@@ -1,0 +1,17 @@
+.explanation {
+    border: none;
+    border-top: 1px solid rgba($black, 0.75);
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+
+    &:after {
+        content: '';
+        top: -1px;
+        position: absolute;
+        width: 50px;
+        height: 1px;
+        left: 0px;
+        background: $black;
+    }
+}
