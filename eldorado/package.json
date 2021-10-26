@@ -34,7 +34,7 @@
 	},
 	"dependencies": {
 		"jquery": "^3.5.1",
-		"jquery-ui": "^1.12.1",
+		"jquery-ui": "^1.13.0",
 		"normalize.css": "^8.0.1",
 		"swiper": "3.4.2",
 		"vue": "^2.6.12",
